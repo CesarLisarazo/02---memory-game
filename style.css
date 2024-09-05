@@ -1,0 +1,21 @@
+img{
+    width: 80px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 10px; 
+    
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+
+   
+
+
+    width: 360px;
+height: 350px;
+background-color: aqua;
+
+    overflow: hidden;
+}
