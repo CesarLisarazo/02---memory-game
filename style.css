@@ -54,6 +54,7 @@ h3, h4 {
     font-weight: bold;
 }
 h1{
+    font-size: 50px;
     color:#01274e ; 
 }
 h3, h4 {
@@ -62,9 +63,5 @@ h3, h4 {
     margin-top: 10px;
 }
 
-@media screen and (max-width: 768px) {
-    #grid {
-        grid-template-columns: repeat(3, 120px); /* 3 columnas en pantallas medianas */
-    }
-}
+
 
