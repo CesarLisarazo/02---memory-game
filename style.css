@@ -1,21 +1,32 @@
-img{
+img {
     width: 80px;
     height: 100px;
     margin: 5px;
-    border-radius: 10px; 
-    
+    border-radius: 10px;
+
 }
 
-#grid{
+#grid {
     display: flex;
     flex-wrap: wrap;
 
-   
+
 
 
     width: 360px;
-height: 350px;
-background-color: aqua;
+    height: 350px;
+    background-color: rgb(49, 49, 49);
 
     overflow: hidden;
+}
+
+body{
+   background-color: rgb(0, 0, 0);
+}
+
+h3{
+    color: beige;
+}
+h4{
+    color: beige;
 }
