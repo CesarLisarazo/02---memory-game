@@ -20,7 +20,9 @@ h3, h4 {
 }
 
 #grid {
+    width: 60vh;
 
+   
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
