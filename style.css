@@ -5,13 +5,13 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #000000;
+    background:linear-gradient(45deg, #1d0220, #d97bfe);
 }
 
 h3, h4 {
@@ -44,15 +44,18 @@ h3, h4 {
 }
 
 #grid img:hover{
-    box-shadow: 0 2px 8px rgba(96, 18, 185, 0.829);
+    box-shadow: 0 2px 8px rgb(0, 243, 231);
 }
 
 #score, #clicks {
-    color: #007BFF;
+    color:#01274e;
     font-weight: bold;
 }
-
+h1{
+    color:#01274e ; 
+}
 h3, h4 {
+    color: #0a3461;
     font-size: 18px;
     margin-top: 10px;
 }
