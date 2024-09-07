@@ -75,3 +75,14 @@ h3, h4 {
     display: flex;
     justify-content: space-evenly;
 }
+@media screen and  (max-width: 900px){
+
+    #grid {
+        width: 48vh;
+    }   
+    
+#grid img {
+    width: 13vh;
+    height: 17vh;
+} 
+}
