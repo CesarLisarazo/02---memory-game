@@ -69,8 +69,8 @@ function checkMatch() {
 
     if (score.innerHTML == cardArray.length / 2) {
         Swal.fire({
-            title: "¡Ganaste!",
-            text: "Y te tomó " + clicks.innerHTML + " clics",
+            title: "¡Ganastes!",
+            text: "Y te tomó " + clicks.innerHTML + " clicks.",
             confirmButtonText: "Jugar de nuevo",
             background: "#e4dbc7",
         }).then(() => {
