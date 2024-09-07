@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "jsdom": "^25.0.0"
+    "jsdom": "^25.0.0",
+    "sweetalert2": "^11.13.3"
   }
 }

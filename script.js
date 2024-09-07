@@ -74,6 +74,7 @@ function createBoard() {
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         gridDisplay.appendChild(card)
+        console.log(cardArray)
     }
 }
 
@@ -107,8 +108,14 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-        alert('Ganastes con '+  clicks.innerHTML+ ' clicks wey!')
-        location.reload();
+       
+        swal({
+            title: "Ganastes wey!",
+            text: "y te tomó "+ clicks.innerHTML+" clicks",
+            icon: "success",
+        
+           
+          })
     }
 
     cardsChosen = []
@@ -139,4 +146,3 @@ function flipCard() {
     
     console.log(cardId)
 }
-
