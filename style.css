@@ -32,8 +32,8 @@ h3, h4 {
 }
 
 #grid img {
-    width: 13vh;
-    height: 20vh;
+    width: 15vh;
+    height: 22vh;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(5, 63, 172, 0.473);
     transition: transform 0.3s, box-shadow 0.3s;
