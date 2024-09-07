@@ -59,9 +59,12 @@ h3, h4 {
 h1{
     
     font-size: 40px;
-    color:#ad5301 ; 
+    color:#ca6404 ; 
     font-family: "Berkshire Swash", serif;
-}
+    text-shadow:0 2px 4px rgba(0, 243, 231, 0.432);
+} 
+    
+
 h3, h4 {
     color: #e9b036;
     font-size: 20px;
