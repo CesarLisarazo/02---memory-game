@@ -107,7 +107,7 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-        alert('Ganastes wey!')
+        alert('Ganastes con '+  clicks.innerHTML+ ' clicks wey!')
         location.reload();
     }
 
