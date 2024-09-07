@@ -90,10 +90,7 @@ function checkMatch() {
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
 
-    if (optionOneId == optionTwoId) {
-        alert('Hiciste click en la misma imagen, lo arruinaste todo! \n yava llorá')
-        location.reload();
-    }
+   
 
     if (cardsChosen[0] == cardsChosen[1]) {
         cards[optionOneId].removeEventListener('click', flipCard)
@@ -131,8 +128,12 @@ function checkMatch() {
 
 
 function flipCard() {
+   
     clicks.innerHTML = Number(clicks.innerHTML) + 1
     const cardId = this.dataset.id
+    if (cardsChosenIds.includes(cardId)) {
+        return 
+    }
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
