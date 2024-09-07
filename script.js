@@ -2,15 +2,15 @@
 const cardArray = [
     {
         name: 'Seiya',
-        img: 'images/Seiya.jpg'
+        img: 'images/Seiya.png'
     },
     {
         name: 'Hyoga',
-        img: 'images/Hyoga.jpg'
+        img: 'images/Hyoga.png'
     },
     {
         name: 'Ikki',
-        img: 'images/Ikki.jpg'
+        img: 'images/Ikki.png'
     },
     {
         name: 'Saori',
@@ -18,23 +18,23 @@ const cardArray = [
     },
     {
         name: 'Shiryu',
-        img: 'images/Shiryu.jpg'
+        img: 'images/Shiryu.png'
     },
     {
         name: 'Shun',
-        img: 'images/Shun.jpg'
+        img: 'images/Shun.png'
     },
     {
         name: 'Seiya',
-        img: 'images/Seiya.jpg'
+        img: 'images/Seiya.png'
     },
     {
         name: 'Hyoga',
-        img: 'images/Hyoga.jpg'
+        img: 'images/Hyoga.png'
     },
     {
         name: 'Ikki',
-        img: 'images/Ikki.jpg'
+        img: 'images/Ikki.png'
     },
     {
         name: 'Saori',
@@ -42,11 +42,11 @@ const cardArray = [
     },
     {
         name: 'Shiryu',
-        img: 'images/Shiryu.jpg'
+        img: 'images/Shiryu.png'
     },
     {
         name: 'Shun',
-        img: 'images/Shun.jpg'
+        img: 'images/Shun.png'
     }
 
 ]
@@ -89,6 +89,7 @@ function checkMatch() {
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
 
+    
    
     if (cardsChosen[0] == cardsChosen[1]) {
         cards[optionOneId].removeEventListener('click', flipCard)
@@ -106,7 +107,7 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-        alert('Ganaste wey!')
+        alert('Ganastes wey!')
         location.reload();
     }
 
@@ -122,7 +123,7 @@ function flipCard() {
     clicks.innerHTML = Number(clicks.innerHTML) + 1
     const cardId = this.dataset.id
     if (cardsChosenIds.includes(cardId)) {
-        return // No hagas nada si la carta ya está volteada
+        return 
     }
 
 
@@ -133,5 +134,9 @@ function flipCard() {
     if (cardsChosen.length === 2) {
         setTimeout(checkMatch, 400)
     }
+
+    console.log(cardsChosenIds)
+    
+    console.log(cardId)
 }
 
