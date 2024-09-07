@@ -60,13 +60,18 @@ h1{
     
     font-size: 40px;
     color:#ad5301 ; 
+    
 }
 h3, h4 {
     color: #e9b036;
     font-size: 20px;
+   
 
 }
 
+#numbers{
+    margin: 10px;
+}
 @media screen and  (max-width: 900px){
 
     #grid {
