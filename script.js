@@ -116,6 +116,7 @@ function checkMatch() {
         
            
           })
+          location.reload();
     }
 
     cardsChosen = []
