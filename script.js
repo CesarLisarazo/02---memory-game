@@ -1,4 +1,3 @@
-
 const cardArray = [
     {
         name: 'Seiya',
@@ -74,7 +73,6 @@ function createBoard() {
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         gridDisplay.appendChild(card)
-        console.log(cardArray)
     }
 }
 
@@ -108,15 +106,8 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-       
-        swal({
-            title: "Ganastes wey!",
-            text: "y te tomó "+ clicks.innerHTML+" clicks",
-            icon: "success",
-        
-           
-          })
-          location.reload();
+        alert('Ganastes con '+  clicks.innerHTML+ ' clicks wey!')
+        location.reload();
     }
 
     cardsChosen = []
