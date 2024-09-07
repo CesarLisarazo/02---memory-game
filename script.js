@@ -47,7 +47,7 @@ function flipCard() {
 
     if (cardsChosen.length === 2) {
         clicksEnabled = false; // Deshabilitar clics mientras se comparan
-        setTimeout(checkMatch, 700);
+        setTimeout(checkMatch, 600);
     }
 }
 
