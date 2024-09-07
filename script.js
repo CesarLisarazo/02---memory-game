@@ -1,3 +1,4 @@
+
 const cardArray = [
     {
         name: 'Seiya',
@@ -73,6 +74,7 @@ function createBoard() {
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipCard)
         gridDisplay.appendChild(card)
+        console.log(cardArray)
     }
 }
 
@@ -88,8 +90,11 @@ function checkMatch() {
     const optionOneId = cardsChosenIds[0]
     const optionTwoId = cardsChosenIds[1]
 
-    
-   
+    if (optionOneId == optionTwoId) {
+        alert('Hiciste click en la misma imagen, lo arruinaste todo! \n yava llorá')
+        location.reload();
+    }
+
     if (cardsChosen[0] == cardsChosen[1]) {
         cards[optionOneId].removeEventListener('click', flipCard)
         cards[optionTwoId].removeEventListener('click', flipCard)
@@ -106,8 +111,15 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-        alert('Ganastes con '+  clicks.innerHTML+ ' clicks wey!')
-        location.reload();
+        Swal.fire({
+            title: "¡Ganastes!",
+            text: "Y te tomó "+clicks.innerHTML+" clicks ",
+            confirmButtonText: "Jugar de nuevo",
+            background:  "#e4dbc7",
+           
+        }).then(() => {
+            location.reload();
+        });
     }
 
     cardsChosen = []
@@ -121,11 +133,6 @@ function checkMatch() {
 function flipCard() {
     clicks.innerHTML = Number(clicks.innerHTML) + 1
     const cardId = this.dataset.id
-    if (cardsChosenIds.includes(cardId)) {
-        return 
-    }
-
-
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenIds.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
@@ -133,8 +140,5 @@ function flipCard() {
     if (cardsChosen.length === 2) {
         setTimeout(checkMatch, 500)
     }
-
-    console.log(cardsChosenIds)
-    
-    console.log(cardId)
 }
+
