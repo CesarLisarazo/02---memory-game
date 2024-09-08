@@ -55,6 +55,7 @@ function checkMatch() {
     const cards = document.querySelectorAll('img');
     const optionOneId = cardsChosenIds[0];
     const optionTwoId = cardsChosenIds[1];
+    clicksEnabled = true; // Habilitar clics de nuevo
 
     if (cardsChosen[0] === cardsChosen[1]) {
         cards[optionOneId].removeEventListener('click', flipCard);
@@ -80,7 +81,6 @@ function checkMatch() {
 
     cardsChosen = [];
     cardsChosenIds = [];
-    clicksEnabled = true; // Habilitar clics de nuevo
 }
 
 createBoard();
