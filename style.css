@@ -34,7 +34,7 @@ h3, h4 {
 #grid img {
     width: 17vh;
     height: 24vh;
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(5, 63, 172, 0.473);
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -59,7 +59,7 @@ h3, h4 {
 h1{
     
     font-size: 40px;
-    color:#9e5f00 ; 
+    color:#ca4e06 ; 
     font-family: "Berkshire Swash", serif;
     text-shadow: 0 4px 10px rgba(0, 243, 231, 0.322);
 }
