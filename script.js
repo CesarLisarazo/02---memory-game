@@ -109,8 +109,8 @@ function checkMatch() {
 
     if (score.innerHTML == cardArray.length / 2) {
         Swal.fire({
-            title: "¡Ganastes!",
-            text: "Y te tomó "+clicks.innerHTML+" clicks ",
+            title: "¡Ganaste!",
+            text: "Y te tomó " + clicks.innerHTML + " clics",
             confirmButtonText: "Jugar de nuevo",
             background:  "#e4dbc7",
            
@@ -119,27 +119,9 @@ function checkMatch() {
         });
     }
 
-    cardsChosen = []
-    cardsChosenIds = []
+    cardsChosen = [];
+    cardsChosenIds = [];
+    clicksEnabled = true; // Habilitar clics de nuevo
 }
 
-
-
-
-
-function flipCard() {
-   
-    clicks.innerHTML = Number(clicks.innerHTML) + 1
-    const cardId = this.dataset.id
-    if (cardsChosenIds.includes(cardId)) {
-        return 
-    }
-    cardsChosen.push(cardArray[cardId].name)
-    cardsChosenIds.push(cardId)
-    this.setAttribute('src', cardArray[cardId].img)
-
-    if (cardsChosen.length === 2) {
-        setTimeout(checkMatch, 500)
-    }
-}
-
+createBoard();
