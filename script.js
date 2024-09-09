@@ -34,6 +34,8 @@ function createBoard() {
 }
 
 function flipCard() {
+    console-console.log(cardArray);
+    
     if (!clicksEnabled) return; // Bloquear clics si están deshabilitados
 
     clicks.innerHTML = Number(clicks.innerHTML) + 1;
@@ -69,14 +71,97 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-        Swal.fire({
-            title: "¡Ganaste!",
-            text: "Y te tomó " + clicks.innerHTML + " clics",
-            confirmButtonText: "Jugar de nuevo",
-            background: "#e4dbc7",
-        }).then(() => {
-            location.reload();
-        });
+
+        if(Number(clicks.innerHTML)>=32  ){
+
+            Swal.fire({
+                title: "Are you still there?",
+                html:  clicks.innerHTML + " clicks? Well, I guess the important thing is that you made it...<br>🐢",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+               
+            }).then(() => {
+                location.reload();
+            });
+        }
+
+
+        if(Number(clicks.innerHTML)<32 &&Number(clicks.innerHTML)>=27 ){
+
+            Swal.fire({
+                title: "You survived!",
+                html:  clicks.innerHTML + " clicks? Phew... that took a while. Did you take a coffee break in between?<br>☕️",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+               
+            }).then(() => {
+                location.reload();
+            });
+
+
+        }
+        if(Number(clicks.innerHTML)<27 &&Number(clicks.innerHTML)>=22 ){
+
+            Swal.fire({
+                title: "You made it... eventually",
+                html:  clicks.innerHTML + " clicks... What if I told you that you could do it fast AND right?<br>⌛",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+               
+            }).then(() => {
+                location.reload();
+            });
+
+
+        }
+
+
+
+
+
+        if(Number(clicks.innerHTML)<22 &&Number(clicks.innerHTML)>=17 ){
+
+            Swal.fire({
+                title: "Well done!",
+                html:  clicks.innerHTML + " clicks, now you can give those fingers a break.<br>🖐️",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+               
+            }).then(() => {
+                location.reload();
+            });
+
+
+        }
+       
+       
+       
+        if(Number(clicks.innerHTML)<17&& Number(clicks.innerHTML)>12){
+
+            Swal.fire({
+                title: "You're a genius!",
+                html: "Just " + clicks.innerHTML + " clicks? Are you a robot disguised as a human? That was ridiculously fast!<br>🧠",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+               
+            }).then(() => {
+                location.reload();
+            });
+        }
+
+        if(Number(clicks.innerHTML)==12){
+
+            Swal.fire({
+                title: "Flawless victory",
+                html: "You must have psychic powers! Go get a lottery ticket right now! <br>🍀",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+               
+            }).then(() => {
+                location.reload();
+            });
+        }
+
     }
 
     cardsChosen = [];
