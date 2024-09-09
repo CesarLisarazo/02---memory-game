@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-button, a, input {
+button, a, input,img {
     -webkit-tap-highlight-color: transparent; /* Para Safari y Chrome */
     outline: none; /* Elimina el contorno del foco */
 }
