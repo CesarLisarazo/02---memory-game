@@ -90,7 +90,7 @@ function checkMatch() {
 
             Swal.fire({
                 title: "You survived!",
-                html:  clicks.innerHTML +  " clicks... What if I told you that you could do it fast AND right?<br>⌛",
+                html:  clicks.innerHTML +  " clicks... What if I told you that you could do it right AND fast?<br>⌛",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
                
