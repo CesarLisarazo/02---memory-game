@@ -7,6 +7,7 @@ button, a, input {
     -webkit-tap-highlight-color: transparent; /* Para Safari y Chrome */
     outline: none; /* Elimina el contorno del foco */
 }
+
 body {
     user-select: none;
     display: flex;
