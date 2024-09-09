@@ -72,7 +72,7 @@ function checkMatch() {
 
     if (score.innerHTML == cardArray.length / 2) {
 
-        if(Number(clicks.innerHTML)>=32  ){
+        if(Number(clicks.innerHTML)>=36  ){
 
             Swal.fire({
                 title: "Are you still there?",
@@ -86,10 +86,24 @@ function checkMatch() {
         }
 
 
-        if(Number(clicks.innerHTML)<32 &&Number(clicks.innerHTML)>=27 ){
+        if(Number(clicks.innerHTML)<36 &&Number(clicks.innerHTML)>=30 ){
 
             Swal.fire({
                 title: "You survived!",
+                html:  clicks.innerHTML +  " clicks... What if I told you that you could do it fast AND right?<br>⌛",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+               
+            }).then(() => {
+                location.reload();
+            });
+
+
+        }
+        if(Number(clicks.innerHTML)<30 &&Number(clicks.innerHTML)>=24 ){
+
+            Swal.fire({
+                title: "You made it... eventually",
                 html:  clicks.innerHTML + " clicks? Phew... that took a while. Did you take a coffee break in between?<br>☕️",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
@@ -100,26 +114,12 @@ function checkMatch() {
 
 
         }
-        if(Number(clicks.innerHTML)<27 &&Number(clicks.innerHTML)>=22 ){
-
-            Swal.fire({
-                title: "You made it... eventually",
-                html:  clicks.innerHTML + " clicks... What if I told you that you could do it fast AND right?<br>⌛",
-                confirmButtonText: "Reload",
-                background: "#e4dbc7",
-               
-            }).then(() => {
-                location.reload();
-            });
-
-
-        }
 
 
 
 
 
-        if(Number(clicks.innerHTML)<22 &&Number(clicks.innerHTML)>=17 ){
+        if(Number(clicks.innerHTML)<24 &&Number(clicks.innerHTML)>=18 ){
 
             Swal.fire({
                 title: "Well done!",
