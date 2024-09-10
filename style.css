@@ -142,11 +142,11 @@ h1{
 }
 @keyframes cambiarSombra{
     0%{
-        text-shadow:0 4px 10px rgba(0, 243, 231, 0.322);
+        text-shadow:0 4px 10px rgba(0, 243, 231, 0.438);
     }
 
     100%{
-        text-shadow:0 4px 10px  rgba(58, 114, 218, 0.664) ;
+        text-shadow:0 4px 10px   rgba(0, 243, 203, 0.308) ;
     }
 }
 
