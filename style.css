@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/space-stars-texture-sololos.jpg');
+    background-image: url('https://wallpapercave.com/wp/wp3493593.jpg');
     background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
     background-position: center; /* Esto centrará la imagen */
 }
@@ -25,7 +25,7 @@ h3, h4 {
 }
 
 #grid {
-    width: 54vh;
+    width: 80vh;
 
    
     display: flex;
