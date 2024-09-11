@@ -32,10 +32,51 @@ let frases = [
     "Slide the cards, hear the echo of what was and what will be.",
     "The echoes of fate vibrate within the mysteries of the tarot.",
     "Through arcane echoes, wisdom unfolds in silence.",
-    "With each card revealed, the echo of destiny grows stronger."
+    "With each card revealed, the echo of destiny grows stronger.",
+    "Unlock the arcane echoes that guide you through the unknown.",
+    "Every turn of the card echoes with timeless wisdom.",
+    "The arcane calls, will you heed its ancient echoes?",
+    "Echoes of the universe lie hidden within each card.",
+    "Trust in the echoes of the past to reveal the future.",
+    "The cards reflect your soul, echoing truths untold.",
+    "In the silence of the arcane, the echoes of fate speak clearly.",
+    "Each card carries a whisper from the ancient realms.",
+    "Through the cards, the echoes of destiny unfold step by step.",
+    "The arcane resonates with every match, revealing hidden paths.",
+    "Echoes of long-lost secrets lie within each arcane symbol.",
+    "With every move, the echoes of fate grow stronger.",
+    "Reveal the arcane echoes that link the past, present, and future.",
+    "The tarot holds the echoes of journeys yet to be discovered.",
+    "In every card lies an echo of your soul’s hidden path.",
+    "Arcane echoes stir beneath the surface, waiting to be unveiled.",
+    "Step into the echoes of the unknown, where answers await.",
+    "Every card flipped echoes with the mysteries of time.",
+    "Dive into the echoes of the arcane, where the answers lie.",
+    "The arcane whispers in echoes only the heart can hear.",
+    "The echoes of ancient wisdom lie hidden in the cards.",
+    "Each shuffle stirs the arcane echoes waiting to be revealed.",
+    "In the quiet between the cards, echoes of truth emerge.",
+    "The cards align, and the echoes of fate become clear.",
+    "Every card holds a secret echo from the mysteries of the universe.",
+    "The arcane echoes grow louder with each step of your journey.",
+    "The answers you seek lie within the echoes of the tarot.",
+    "Flip the cards and let the arcane echoes guide your way.",
+    "Echoes of the arcane lead you through the path of discovery.",
+    "The cards resonate with echoes of the past, present, and future.",
+    "Feel the echoes of destiny ripple through every turn of the card.",
+    "The tarot speaks in echoes, guiding those who listen closely.",
+    "In the echoes of the arcane, new paths are revealed.",
+    "The mysteries of the universe echo through each tarot card.",
+    "With each pair you uncover, the arcane echoes grow stronger.",
+    "Let the arcane echoes guide your hand as you reveal each card.",
+    "Each flip reveals an echo of the cosmic dance of fate.",
+    "The tarot whispers, and its echoes unfold your destiny.",
+    "As the cards turn, the echoes of the arcane unveil their secrets.",
+    "In the echoes of each card, the path to wisdom is illuminated."
 ];
 
-let numeroRandom=Math.floor(Math.random() * 20) ;
+
+let numeroRandom=Math.floor(Math.random() * 60) ;
 
 cardArray.sort(() => 0.5 - Math.random());
 let frase= document.getElementById('frasecita')

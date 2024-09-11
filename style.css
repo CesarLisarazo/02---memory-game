@@ -61,7 +61,7 @@ h3, h4 {
     z-index: 2;
 width: 20vh;
 
-
+animation: vanish 3s;
     text-align: center;
     color:#e9b036;
     font-weight: bold;
@@ -71,16 +71,17 @@ width: 20vh;
 #clicks{
 
   
-   
+    animation: vanish 3s;
     color:#e9b036;
     font-weight: bold;
 
 }
 h1{
     
-    font-size: 40px;
- 
-    font-family: "Berkshire Swash", serif;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
  
 }
 
@@ -117,12 +118,22 @@ h1{
     text-align: left;
 animation: vanish 3s;
     color:#e9b036;
-
+ 
  
 }
+
+/*Every card holds a secret echo from the mysteries of the universe.*/
+
 #frasecita{
     color: #e9b036;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+    width: 80%;
+    height: 40px;
+    font-size: smaller;
+    animation: aparecer 3s, cambiarSombra 3s infinite alternate;
+}
+.container{
     margin-bottom: 10px;
 }
 .text-gradient {
