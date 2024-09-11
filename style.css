@@ -95,30 +95,29 @@ h1{
 #numbers{
   
 
-    width:28vh;
+    width:34vh;
     margin: 10px;
     display: flex;
- 
 
 
     
 }
 
 .tittle{
-    width: 40vh;
+    width: 44vh;
     text-align: left;
     color:#e9b036;
-  
+
     animation: vanish 3s;
 
 }
 
 .tittle2{
-    width: 22vh;
+    width: 25vh;
     text-align: left;
 animation: vanish 3s;
     color:#e9b036;
-  
+
  
 }
 
