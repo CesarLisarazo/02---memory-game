@@ -94,29 +94,32 @@ h1{
 }
 #numbers{
   
-    transform: translateX(4vh);
-    width:32vh;
+
+    width:28vh;
     margin: 10px;
     display: flex;
+ 
 
 
     
 }
 
 .tittle{
-    width: 50%;
+    width: 40vh;
     text-align: left;
     color:#e9b036;
-    width: 20vh;
+  
     animation: vanish 3s;
+
 }
 
 .tittle2{
-    width: 50%;
+    width: 22vh;
     text-align: left;
 animation: vanish 3s;
     color:#e9b036;
-    width: 20vh;
+  
+ 
 }
 
 .text-gradient {
