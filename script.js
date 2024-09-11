@@ -12,9 +12,33 @@ const cardArray = [
     { name: 'Shiryu', img: 'images/Shiryu.png' },
     { name: 'Shun', img: 'images/Shun.png' }
 ];
+let frases = [
+    "Each card holds an echo of destiny, will you dare to listen?",
+    "Arcane echoes resonate with every draw, revealing the hidden.",
+    "Explore the shadows and the light, where mysteries await.",
+    "The cards whisper ancient truths, listen closely.",
+    "Your intuition is the key to unveiling the echoes of the past.",
+    "Within the cards lie answers only the soul can see.",
+    "With every pair found, a fragment of the arcane is revealed.",
+    "Feel the energy of the arcane resonate with every move.",
+    "In this memory game, the echoes of fate intertwine.",
+    "The tarot is a mirror, and each card, a reflection of the soul.",
+    "Reconnect with the arcane, where past and future converge.",
+    "The cards call you to uncover the footprints of destiny.",
+    "Each card is a window into arcane mysteries.",
+    "Reveal the echoes that connect the present with the eternal.",
+    "With each step, an arcane echo will guide you to the truth.",
+    "In every card, an arcane echo resonates through time.",
+    "Slide the cards, hear the echo of what was and what will be.",
+    "The echoes of fate vibrate within the mysteries of the tarot.",
+    "Through arcane echoes, wisdom unfolds in silence.",
+    "With each card revealed, the echo of destiny grows stronger."
+];
+
+let numeroRandom=Math.floor(Math.random() * 20) ;
 
 cardArray.sort(() => 0.5 - Math.random());
-
+let frase= document.getElementById('frasecita')
 const gridDisplay = document.getElementById('grid');
 let score = document.getElementById('score');
 let clicks = document.getElementById('clicks');
@@ -22,7 +46,7 @@ let cardsChosen = [];
 let cardsChosenIds = [];
 let cardsWon = [];
 let clicksEnabled = true; // Para controlar clics durante comparación
-
+frase.innerHTML=frases[numeroRandom]
 function createBoard() {
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');

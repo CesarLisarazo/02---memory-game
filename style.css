@@ -96,7 +96,7 @@ h1{
   
 
     width:34vh;
-    margin: 10px;
+    margin-top: 10px;
     display: flex;
 
 
@@ -120,7 +120,11 @@ animation: vanish 3s;
 
  
 }
-
+#frasecita{
+    color: #e9b036;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 10px;
+}
 .text-gradient {
     background: linear-gradient(to bottom, #ac2605, #ebc5a8); /* Degradado de arriba hacia abajo */
     -webkit-background-clip: text; /* Aplica el fondo solo al texto */
