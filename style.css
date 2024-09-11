@@ -120,7 +120,7 @@ animation: vanish 3s;
 }
 
 .text-gradient {
-    background: linear-gradient(to bottom, #ac2605, #feb47b); /* Degradado de arriba hacia abajo */
+    background: linear-gradient(to bottom, #ac2605, #ebc5a8); /* Degradado de arriba hacia abajo */
     -webkit-background-clip: text; /* Aplica el fondo solo al texto */
     -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el fondo */
     background-clip: text; /* Necesario para otros navegadores */
@@ -147,7 +147,7 @@ animation: vanish 3s;
 }
 @keyframes cambiarSombra{
     0%{
-        text-shadow:0 4px 10px rgba(0, 243, 231, 0.322);
+        text-shadow:0 4px 10px rgba(0, 243, 231, 0.171);
     }
 
     100%{
