@@ -58,10 +58,11 @@ h3, h4 {
 
 #score{
 
+    z-index: 2;
+width: 20vh;
 
 
-
- 
+    text-align: center;
     color:#e9b036;
     font-weight: bold;
 }
@@ -69,7 +70,7 @@ h3, h4 {
 
 #clicks{
 
- 
+  
    
     color:#e9b036;
     font-weight: bold;
@@ -78,7 +79,7 @@ h3, h4 {
 h1{
     
     font-size: 40px;
-    color:#ca6f06 ; 
+ 
     font-family: "Berkshire Swash", serif;
  
 }
@@ -88,34 +89,26 @@ h1{
 
 #Arcane-echoes{
     
-    animation: aparecer 3s, cambiarSombra 3s infinite alternate;
+    animation: aparecer 4s, cambiarSombra 3s infinite alternate;
  
 }
 #numbers{
-    transform: translateX(6.5vh);
   
     width:40vh;
     margin: 10px;
     display: flex;
-   
+
+       animation: cambiarSombra 4s infinite alternate;
 }
 
 .tittle{
-    width: 20vh;
     text-align: center;
     color:#e9b036;
     width: 20vh;
-    text-align: left;
-    animation: vanish 2s;
-
 }
 
 .tittle2{
-    width: 50%;
-
-    text-align: left;
-  
-    animation: vanish 2s;
+    text-align: center;
 
     color:#e9b036;
     width: 20vh;
@@ -141,33 +134,19 @@ h1{
 
     }
     100%{
-        color:#ca6f06 ;
+        
         transform: scaleX(100%);
 
 
     }
 }
-
-@keyframes vanish{
-    0%{
-        color: #00000000;
-    }
-
-    100%{
-        color:#e9b036;
-
-    }
-}
-
-
-
 @keyframes cambiarSombra{
     0%{
-        text-shadow:0 4px 10px rgba(0, 243, 231, 0.438);
+        text-shadow:0 4px 10px rgba(0, 243, 231, 0.322);
     }
 
     100%{
-        text-shadow:0 4px 10px   rgba(0, 243, 231, 0.438) ;
+        text-shadow:0 4px 10px  rgba(0, 243, 231, 0.322);
     }
 }
 
