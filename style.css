@@ -89,33 +89,36 @@ h1{
 
 #Arcane-echoes{
     
-    animation: aparecer 4s, cambiarSombra 3s infinite alternate;
+    animation: aparecer 3s, cambiarSombra 3s infinite alternate;
  
 }
 #numbers{
   
+    transform: translateX(6.5vh);
     width:40vh;
     margin: 10px;
     display: flex;
 
-       animation: cambiarSombra 4s infinite alternate;
+       animation: cambiarSombra 3s infinite alternate;
 }
 
 .tittle{
-    text-align: center;
+    
+    text-align: left;
     color:#e9b036;
     width: 20vh;
+    animation: vanish 3s;
 }
 
 .tittle2{
-    text-align: center;
-
+    text-align: left;
+animation: vanish 3s;
     color:#e9b036;
     width: 20vh;
 }
 
 .text-gradient {
-    background: linear-gradient(to bottom, #ff7e5f, #feb47b); /* Degradado de arriba hacia abajo */
+    background: linear-gradient(to bottom, #ac2605, #feb47b); /* Degradado de arriba hacia abajo */
     -webkit-background-clip: text; /* Aplica el fondo solo al texto */
     -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el fondo */
     background-clip: text; /* Necesario para otros navegadores */
@@ -128,7 +131,7 @@ h1{
         transform: scaleX(0%);
 
     }
-    25%{
+    10%{
         color: #00000000;
         transform: scaleX(0%);
 
@@ -150,6 +153,18 @@ h1{
     }
 }
 
+
+@keyframes vanish{
+    0%{
+        color: #00000000;
+     
+    }
+    25%{
+       color:#e9b036;
+       
+
+    }
+}
 @media screen and  (max-width: 900px){
 
     #grid {
