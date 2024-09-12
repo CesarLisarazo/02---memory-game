@@ -92,7 +92,7 @@ text-align: center;
 }
 #numbers{
     width: 36vh;
-    transform: translateX(0.6vh);
+  
 
       color: #e9b036;
  font-size: smaller;
@@ -123,6 +123,7 @@ text-align: center;
     text-align: left;
        height: 40px;
        animation: vanish 1s;
+       background-color: #8c95b8;
        
 
 }
