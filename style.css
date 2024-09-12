@@ -15,17 +15,17 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('https://wallpapercave.com/wp/wp3493593.jpg');
+    background-image: url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/space-stars-texture-sololos.jpg');
     background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
     background-position: center; /* Esto centrará la imagen */
 }
 h3, h4 {
     color: #333;
-    margin-bottom: 10px;
+   
 }
 
 #grid {
-    width: 80vh;
+    width: 54vh;
 
    
     display: flex;
@@ -56,133 +56,74 @@ h3, h4 {
     box-shadow: 0 2px 8px rgb(0, 243, 231);
 }
 
-#score{
-
-    z-index: 2;
-width: 20vh;
-
-animation: vanish 3s;
-    text-align: center;
-    color:#e9b036;
-    font-weight: bold;
+#score, #clicks {
+    color: #e9b036c0;
+    font-size: smaller;
+       height: 40px;
+      
 }
 
-
-#clicks{
-
-  
-    animation: vanish 3s;
-    color:#e9b036;
-    font-weight: bold;
-
-}
-h1{
-    
-    font-family: "Roboto Slab", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
- 
-}
-
+h3, h4 {
+    color: #e9b036;
+    font-size: 20px;
    
 
-
-#Arcane-echoes{
-    
-    animation: aparecer 3s, cambiarSombra 3s infinite alternate;
+}
+.container{
+ 
+  
+text-align: center;
+    width: 80%;
+    margin-bottom: 10px;
  
 }
-#numbers{
+#frasecita{
+    color: #b48112;
+ font-size: smaller;
+    height: 40px;
+    text-align: left;
   
-
-    width:34vh;
-    margin-top: 10px;
+}
+#numbers{
+    width:80%;
+      color: #e9b036;
+ font-size: smaller;
+    height: 30px;
+    text-align: left;
     display: flex;
-
-
-    
+    padding-top: 5px;
+ 
+  
+}
+#Arcane-echoes{
+   
+    background-image:url("images/arcane.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 42vh;
+    height: 60px;
+  
 }
 
 .tittle{
-    width: 44vh;
-    text-align: left;
-    color:#e9b036;
-
-    animation: vanish 3s;
-
+    width: 38vh;
+    padding-left: 10px;
+    font-weight: lighter;
+    color: #e9b036c0;
+    font-size: small;
+       height: 40px;
+   
+  
 }
 
 .tittle2{
-    width: 25vh;
-    text-align: left;
-animation: vanish 3s;
-    color:#e9b036;
- 
- 
-}
-
-/*Every card holds a secret echo from the mysteries of the universe.*/
-
-#frasecita{
-    color: #e9b036;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   
-    width: 80%;
-    height: 40px;
-    font-size: smaller;
-    animation: aparecer 3s, cambiarSombra 3s infinite alternate;
-}
-.container{
-    margin-bottom: 10px;
-}
-.text-gradient {
-    background: linear-gradient(to bottom, #ac2605, #ebc5a8); /* Degradado de arriba hacia abajo */
-    -webkit-background-clip: text; /* Aplica el fondo solo al texto */
-    -webkit-text-fill-color: transparent; /* Hace que el texto sea transparente para mostrar el fondo */
-    background-clip: text; /* Necesario para otros navegadores */
-    color: transparent; /* Necesario para otros navegadores */
-  }
-
-@keyframes aparecer{
-    0%{
-        color: #00000000;
-        transform: scaleX(0%);
-
-    }
-    10%{
-        color: #00000000;
-        transform: scaleX(0%);
-
-    }
-    100%{
-        
-        transform: scaleX(100%);
-
-
-    }
-}
-@keyframes cambiarSombra{
-    0%{
-        text-shadow:0 4px 10px rgba(0, 243, 231, 0.171);
-    }
-
-    100%{
-        text-shadow:0 4px 10px  rgba(0, 243, 231, 0.322);
-    }
-}
-
-
-@keyframes vanish{
-    0%{
-        color: #00000000;
-     
-    }
-    25%{
-       color:#e9b036;
-       
-
-    }
+    width: 12vh;
+    color: #e9b036c0;
+    font-weight: lighter;
+    font-size: small;
+       height: 40px;
+  
+    
 }
 @media screen and  (max-width: 900px){
 
@@ -192,6 +133,6 @@ animation: vanish 3s;
     
 #grid img {
     width: 14vh;
-    height: 19vh;
+    height: 18vh;
 } 
 }

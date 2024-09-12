@@ -1,16 +1,16 @@
 const cardArray = [
-    { name: 'Seiya', img: 'images/Seiya.png' },
-    { name: 'Hyoga', img: 'images/Hyoga.png' },
-    { name: 'Ikki', img: 'images/Ikki.png' },
-    { name: 'Saori', img: 'images/Saori.png' },
-    { name: 'Shiryu', img: 'images/Shiryu.png' },
-    { name: 'Shun', img: 'images/Shun.png' },
-    { name: 'Seiya', img: 'images/Seiya.png' },
-    { name: 'Hyoga', img: 'images/Hyoga.png' },
-    { name: 'Ikki', img: 'images/Ikki.png' },
-    { name: 'Saori', img: 'images/Saori.png' },
-    { name: 'Shiryu', img: 'images/Shiryu.png' },
-    { name: 'Shun', img: 'images/Shun.png' }
+    { name: 'wheel of fortune', img: 'images/wheel of fortune.png' },
+    { name: 'the fool', img: 'images/the fool.png' },
+    { name: 'death', img: 'images/death.png' },
+    { name: 'the hanged man', img: 'images/the hanged man.png' },
+    { name: 'the lovers', img: 'images/the lovers.png' },
+    { name: 'the magician', img: 'images/the magician.png' },
+    { name: 'wheel of fortune', img: 'images/wheel of fortune.png' },
+    { name: 'the fool', img: 'images/the fool.png' },
+    { name: 'death', img: 'images/death.png' },
+    { name: 'the hanged man', img: 'images/the hanged man.png' },
+    { name: 'the lovers', img: 'images/the lovers.png' },
+    { name: 'the magician', img: 'images/the magician.png'},
 ];
 let frases = [
     "Each card holds an echo of destiny, will you dare to listen?",
