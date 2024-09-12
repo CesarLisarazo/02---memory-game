@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('https://i.pinimg.com/originals/52/30/ec/5230ec8a17b4e18bb006c10fc64aed30.jpg');
+    background-image: url('https://farm4.static.flickr.com/3395/3333534845_d6e64c68e5_o.png');
     background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
     background-position: center; /* Esto centrará la imagen */
 }
@@ -25,7 +25,10 @@ h3, h4 {
 }
 
 #grid {
-    width: 54vh;
+   
+        width: 48vh;
+  
+    
 
    
     display: flex;
@@ -36,8 +39,9 @@ h3, h4 {
 }
 
 #grid img {
-    width: 17vh;
-    height: 24vh;
+    width: 14vh;
+    height: 18vh;
+   
     border-radius: 8px;
     box-shadow: 0 4px 10px #414555d5;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -80,13 +84,13 @@ text-align: center;
 #frasecita{
     animation: vanish 4s;
     color: #b48112;
- font-size: smaller;
+ 
     height: 40px;
     text-align: left;
   
 }
 #numbers{
-    width:80%;
+
       color: #e9b036;
  font-size: smaller;
     height: 30px;
@@ -97,7 +101,7 @@ text-align: center;
   
 }
 #Arcane-echoes{
-   animation: vanish 1s; duration timing-function delay iteration-count direction fill-mode;
+   animation: vanish 1s;
     background-image:url("images/arcane.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -107,7 +111,7 @@ text-align: center;
 }
 
 .tittle{
-    width: 38vh;
+    width: 34vh;
     padding-left: 10px;
     font-weight: lighter;
     color: #e9b036c0;
@@ -118,7 +122,7 @@ text-align: center;
 }
 
 .tittle2{
-    width: 12vh;
+    width: 7vh;
     color: #e9b036c0;
     font-weight: lighter;
     font-size: small;
@@ -136,13 +140,6 @@ text-align: center;
     }
 }
 @media screen and  (max-width: 900px){
-
-    #grid {
-        width: 48vh;
-    }   
-    
-#grid img {
-    width: 14vh;
-    height: 18vh;
-} 
-}
+    body{
+    background-image: url('https://i.pinimg.com/originals/52/30/ec/5230ec8a17b4e18bb006c10fc64aed30.jpg');
+}}
