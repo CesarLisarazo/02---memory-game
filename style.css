@@ -91,12 +91,15 @@ text-align: center;
   
 }
 #numbers{
+    width: 36vh;
+    transform: translateX(0.6vh);
 
       color: #e9b036;
  font-size: smaller;
     height: 30px;
-    text-align: left;
+    
     display: flex;
+    justify-content: space-between;
     padding-top: 5px;
 
   
@@ -112,23 +115,26 @@ text-align: center;
 }
 
 .tittle{
-    width: 30vh;
-   
+  
+   width: 6vh;
     font-weight: lighter;
     color: #e9b036c0;
     font-size: small;
+    text-align: left;
        height: 40px;
        animation: vanish 1s;
+       
 
 }
 
 .tittle2{
-    width: 11vh;
+    text-align: left;
     color: #e9b036c0;
     font-weight: lighter;
     font-size: small;
        height: 40px;
        animation: vanish 1s;
+      
    
 }
 
