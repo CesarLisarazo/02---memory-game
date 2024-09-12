@@ -139,8 +139,8 @@ function checkMatch() {
 
         if(Number(clicks.innerHTML)>=50  ) {
             Swal.fire({
-                title: "The Lost Soul 🌑",
-                html:  clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.",
+                title: "The Lost Soul ",
+                html:  clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.<br>🌑",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -150,8 +150,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<50 && Number(clicks.innerHTML)>=45) {
             Swal.fire({
-                title: "Seeker of Shadows 🌒",
-                html:  clicks.innerHTML +  " clicks... Still in darkness, you begin to perceive the shadows of hidden truths.",
+                title: "Seeker of Shadows ",
+                html:  clicks.innerHTML +  " clicks... Still in darkness, you begin to perceive the shadows of hidden truths.<br>🌒",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -161,8 +161,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<45 && Number(clicks.innerHTML)>=40) {
             Swal.fire({
-                title: "Wandering Spirit 🌀",
-                html:  clicks.innerHTML + " clicks... Your spirit wanders, yet you feel the distant echo of illumination.",
+                title: "Wandering Spirit ",
+                html:  clicks.innerHTML + " clicks... Your spirit wanders, yet you feel the distant echo of illumination.<br>🌀",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -172,8 +172,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<40 && Number(clicks.innerHTML)>=35) {
             Swal.fire({
-                title: "Novice of the Arcane 🔮",
-                html:  clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.",
+                title: "Novice of the Arcane ",
+                html:  clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.<br>🔮",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -183,8 +183,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<35 && Number(clicks.innerHTML)>=30) {
             Swal.fire({
-                title: "Initiate of the Veil 🌕",
-                html:  clicks.innerHTML + " clicks... You have crossed the threshold into esoteric knowledge.",
+                title: "Initiate of the Veil ",
+                html:  clicks.innerHTML + " clicks... You have crossed the threshold into esoteric knowledge.<br>🌕",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -194,8 +194,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<30 && Number(clicks.innerHTML)>=25) {
             Swal.fire({
-                title: "Adept of the Stars ✨",
-                html:  clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.",
+                title: "Adept of the Stars ",
+                html:  clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.<br>✨",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -205,8 +205,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<25 && Number(clicks.innerHTML)>=20) {
             Swal.fire({
-                title: "Guide of the Cosmos 🌌",
-                html:  clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.",
+                title: "Guide of the Cosmos ",
+                html:  clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.<br>🌌",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -216,8 +216,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<20 && Number(clicks.innerHTML)>=15) {
             Swal.fire({
-                title: "Guardian of Mysteries 🔱",
-                html:  clicks.innerHTML + " clicks... Your connection to the universe strengthens.",
+                title: "Guardian of Mysteries ",
+                html:  clicks.innerHTML + " clicks... Your connection to the universe strengthens.<br>🔱",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -227,8 +227,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<15 && Number(clicks.innerHTML)>=13) {
             Swal.fire({
-                title: "Master of Echoes 🧿",
-                html: "Just " + clicks.innerHTML + " clicks... The echoes of time and fate respond to your call.",
+                title: "Master of Echoes ",
+                html: "Just " + clicks.innerHTML + " clicks... The echoes of time and fate respond to your call.<br>🧿",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -238,8 +238,8 @@ function checkMatch() {
     
         if(Number(clicks.innerHTML)<=12) {
             Swal.fire({
-                title: "Ascended One 🌟",
-                html: "You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos!",
+                title: "Ascended One ",
+                html: "You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos! <br>🌟",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
