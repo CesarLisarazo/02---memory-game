@@ -116,14 +116,14 @@ text-align: center;
 
 .tittle{
   
-   width: 7vh;
+   width: 10vh;
     font-weight: lighter;
     color: #e9b036c0;
     font-size: small;
     text-align: left;
        height: 40px;
        animation: vanish 1s;
-       background-color: #8c95b8;
+       
        
 
 }
