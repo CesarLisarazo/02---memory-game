@@ -137,96 +137,115 @@ function checkMatch() {
 
     if (score.innerHTML == cardArray.length / 2) {
 
-        if(Number(clicks.innerHTML)>=36  ){
-
+        if(Number(clicks.innerHTML)>=50  ) {
             Swal.fire({
-                title: "Are you still there?",
-                html:  clicks.innerHTML + " clicks? Well, I guess the important thing is that you made it...<br>🐢",
+                title: "The Lost Soul 🌑",
+                html:  clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
-               
             }).then(() => {
                 location.reload();
             });
         }
-
-
-        if(Number(clicks.innerHTML)<36 &&Number(clicks.innerHTML)>=30 ){
-
+    
+        if(Number(clicks.innerHTML)<50 && Number(clicks.innerHTML)>=45) {
             Swal.fire({
-                title: "You survived!",
-                html:  clicks.innerHTML +  " clicks... What if I told you that you could do it right AND fast?<br>⌛",
+                title: "Seeker of Shadows 🌒",
+                html:  clicks.innerHTML +  " clicks... Still in darkness, you begin to perceive the shadows of hidden truths.",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
-               
-            }).then(() => {
-                location.reload();
-            });
-
-
-        }
-        if(Number(clicks.innerHTML)<30 &&Number(clicks.innerHTML)>=24 ){
-
-            Swal.fire({
-                title: "You made it... eventually",
-                html:  clicks.innerHTML + " clicks? Phew... that took a while. Did you take a coffee break in between?<br>☕️",
-                confirmButtonText: "Reload",
-                background: "#e4dbc7",
-               
-            }).then(() => {
-                location.reload();
-            });
-
-
-        }
-
-
-
-
-
-        if(Number(clicks.innerHTML)<24 &&Number(clicks.innerHTML)>=18 ){
-
-            Swal.fire({
-                title: "Well done!",
-                html:  clicks.innerHTML + " clicks, now you can give those fingers a break.<br>🖐️",
-                confirmButtonText: "Reload",
-                background: "#e4dbc7",
-               
-            }).then(() => {
-                location.reload();
-            });
-
-
-        }
-       
-       
-       
-        if(Number(clicks.innerHTML)<17&& Number(clicks.innerHTML)>12){
-
-            Swal.fire({
-                title: "You're a genius!",
-                html: "Just " + clicks.innerHTML + " clicks? Are you a robot disguised as a human? That was ridiculously fast!<br>🧠",
-                confirmButtonText: "Reload",
-                background: "#e4dbc7",
-               
             }).then(() => {
                 location.reload();
             });
         }
-
-        if(Number(clicks.innerHTML)==12){
-
+    
+        if(Number(clicks.innerHTML)<45 && Number(clicks.innerHTML)>=40) {
             Swal.fire({
-                title: "Flawless victory",
-                html: "You must have psychic powers! Go get a lottery ticket right now! <br>🍀",
+                title: "Wandering Spirit 🌀",
+                html:  clicks.innerHTML + " clicks... Your spirit wanders, yet you feel the distant echo of illumination.",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
-               
             }).then(() => {
                 location.reload();
             });
         }
-
+    
+        if(Number(clicks.innerHTML)<40 && Number(clicks.innerHTML)>=35) {
+            Swal.fire({
+                title: "Novice of the Arcane 🔮",
+                html:  clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+            }).then(() => {
+                location.reload();
+            });
+        }
+    
+        if(Number(clicks.innerHTML)<35 && Number(clicks.innerHTML)>=30) {
+            Swal.fire({
+                title: "Initiate of the Veil 🌕",
+                html:  clicks.innerHTML + " clicks... You have crossed the threshold into esoteric knowledge.",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+            }).then(() => {
+                location.reload();
+            });
+        }
+    
+        if(Number(clicks.innerHTML)<30 && Number(clicks.innerHTML)>=25) {
+            Swal.fire({
+                title: "Adept of the Stars ✨",
+                html:  clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+            }).then(() => {
+                location.reload();
+            });
+        }
+    
+        if(Number(clicks.innerHTML)<25 && Number(clicks.innerHTML)>=20) {
+            Swal.fire({
+                title: "Guide of the Cosmos 🌌",
+                html:  clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+            }).then(() => {
+                location.reload();
+            });
+        }
+    
+        if(Number(clicks.innerHTML)<20 && Number(clicks.innerHTML)>=15) {
+            Swal.fire({
+                title: "Guardian of Mysteries 🔱",
+                html:  clicks.innerHTML + " clicks... Your connection to the universe strengthens.",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+            }).then(() => {
+                location.reload();
+            });
+        }
+    
+        if(Number(clicks.innerHTML)<15 && Number(clicks.innerHTML)>=13) {
+            Swal.fire({
+                title: "Master of Echoes 🧿",
+                html: "Just " + clicks.innerHTML + " clicks... The echoes of time and fate respond to your call.",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+            }).then(() => {
+                location.reload();
+            });
+        }
+    
+        if(Number(clicks.innerHTML)<=12) {
+            Swal.fire({
+                title: "Ascended One 🌟",
+                html: "You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos!",
+                confirmButtonText: "Reload",
+                background: "#e4dbc7",
+            }).then(() => {
+                location.reload();
+            });
+        }
     }
 
     cardsChosen = [];
