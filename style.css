@@ -78,6 +78,7 @@ text-align: center;
  
 }
 #frasecita{
+    animation: vanish 4s;
     color: #b48112;
  font-size: smaller;
     height: 40px;
@@ -96,7 +97,7 @@ text-align: center;
   
 }
 #Arcane-echoes{
-   
+   animation: vanish 1s; duration timing-function delay iteration-count direction fill-mode;
     background-image:url("images/arcane.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -112,7 +113,7 @@ text-align: center;
     color: #e9b036c0;
     font-size: small;
        height: 40px;
-   
+       animation: vanish 1s;
   
 }
 
@@ -122,8 +123,17 @@ text-align: center;
     font-weight: lighter;
     font-size: small;
        height: 40px;
-  
+       animation: vanish 1s;
     
+}
+
+@keyframes vanish{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 @media screen and  (max-width: 900px){
 
