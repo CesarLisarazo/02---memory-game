@@ -39,7 +39,7 @@ h3, h4 {
     width: 17vh;
     height: 24vh;
     border-radius: 8px;
-    box-shadow: 0 4px 10px #20222a;
+    box-shadow: 0 4px 10px #414555d5;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     
@@ -53,7 +53,7 @@ h3, h4 {
 }
 
 #grid img:hover{
-    box-shadow: 0 2px 8px #484c5e;
+    box-shadow: 0 2px 8px #8c95b8;
 }
 
 #score, #clicks {
