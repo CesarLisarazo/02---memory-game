@@ -84,6 +84,7 @@ text-align: center;
 #frasecita{
     animation: vanish 4s;
     color: #b48112;
+    font-size: smaller;
  
     height: 40px;
     text-align: left;
