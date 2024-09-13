@@ -18,6 +18,7 @@ body {
     background-image: url('https://farm4.static.flickr.com/3395/3333534845_d6e64c68e5_o.png');
     background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
     background-position: center; /* Esto centrará la imagen */
+    
 }
 h3, h4 {
     color: #333;
@@ -92,7 +93,7 @@ text-align: center;
 }
 #numbers{
     width: 20vh;
-  
+  margin-left: 2.5vh;
 
       color: #e9b036;
  font-size: smaller;
@@ -101,6 +102,7 @@ text-align: center;
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+   
 
   
 }
