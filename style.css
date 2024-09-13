@@ -121,6 +121,7 @@ text-align: center;
     color: #e9b036c0;
     font-size: small;
     text-align: left;
+    margin-right: 10px;
        height: 40px;
        animation: vanish 1s;
        
@@ -129,7 +130,8 @@ text-align: center;
 }
 
 .tittle2{
-    text-align: left;
+
+    text-align: center;
     color: #e9b036c0;
     font-weight: lighter;
     font-size: small;
