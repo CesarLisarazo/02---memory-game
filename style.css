@@ -91,7 +91,7 @@ text-align: center;
   
 }
 #numbers{
-    width: 36vh;
+    width: 20vh;
   
 
       color: #e9b036;
@@ -100,7 +100,7 @@ text-align: center;
     
     display: flex;
     justify-content: space-between;
-    padding-top: 5px;
+    padding-top: 20px;
 
   
 }
