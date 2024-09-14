@@ -91,6 +91,7 @@ let cardsWon = [];
 let clicksEnabled = true; // Para controlar clics durante comparación
 let music= true;
 let sound = document.getElementById("sound")
+let final=document.getElementById("final")
 frase.innerHTML=frases[numeroRandom]
 
 
@@ -114,8 +115,8 @@ function flipCard() {
     clickSound.currentTime=0;
     clickSound.play();
      
-
-    console-console.log(clickSound.id);
+    console.log(gridDisplay)
+    console-console.log(cardArray);
     
 
     if(sound.innerHTML=="Off"){
@@ -163,7 +164,7 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-
+        final.play()
         if(Number(clicks.innerHTML)>=33  ) {
             Swal.fire({
                 title: "The Lost Soul ",
@@ -171,7 +172,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -182,7 +183,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -193,7 +194,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -204,7 +205,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -215,7 +216,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -226,7 +227,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -237,7 +238,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -248,7 +249,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -259,7 +260,7 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+                clearDisplay();
             });
         }
     
@@ -270,13 +271,26 @@ function checkMatch() {
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
-                location.reload();
+               
+                clearDisplay();
             });
         }
     }
 
     cardsChosen = [];
     cardsChosenIds = [];
+}
+
+function clearDisplay(){
+    clicks.innerHTML=0;
+    score.innerHTML=0
+    gridDisplay.innerHTML=""
+    frase.innerHTML=frases[numeroRandom]
+   cardsWon = [];
+    createBoard();
+
+
+
 }
 
 createBoard();
