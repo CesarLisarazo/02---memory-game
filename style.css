@@ -92,7 +92,7 @@ text-align: center;
   
 }
 #numbers{
-    background-color: crimson;
+ 
     width: 40vh;
   margin-left: 4vh;
 
@@ -118,7 +118,7 @@ text-align: center;
 }
 
 .tittle{
-    background-color: #8c95b893;
+
    width: 33.3%;
     font-weight: lighter;
     color: #e9b036c0;
@@ -135,7 +135,7 @@ text-align: center;
 
 .tittle2{
     width: 33.3%;
-background-color: #e9b03667;
+
     text-align: right;
     color: #e9b036c0;
     font-weight: lighter;
@@ -148,7 +148,7 @@ background-color: #e9b03667;
 }
 
 .tittle3{
-    background-color: blueviolet;
+
     text-align: center;
     width: 33.3%;
     color: #e9b036c0;
