@@ -140,7 +140,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)>=33  ) {
             Swal.fire({
                 title: "The Lost Soul ",
-                html: "You’ve crossed into the tenth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.<br>🌑",
+                html: "You’ve crossed into the tenth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.<br><h1>🌑</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -151,7 +151,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)==32 || Number(clicks.innerHTML)==31) {
             Swal.fire({
                 title: "Seeker of Shadows ",
-                html:  "You’ve crossed into the ninth tier of enlightenment.<br><br>" + clicks.innerHTML +  " clicks. Still in darkness, you begin to perceive the shadows of hidden truths.<br>🌒",
+                html:  "You’ve crossed into the ninth tier of enlightenment.<br><br>" + clicks.innerHTML +  " clicks. Still in darkness, you begin to perceive the shadows of hidden truths.<br><h1>🌒</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -162,7 +162,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)==29 || Number(clicks.innerHTML)==30) {
             Swal.fire({
                 title: "Wandering Spirit ",
-                html:  "You’ve crossed into the eighth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks. Your spirit wanders, yet you feel the distant echo of illumination.<br>🌀",
+                html:  "You’ve crossed into the eighth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks. Your spirit wanders, yet you feel the distant echo of illumination.<br><h1>🌀</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -173,7 +173,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)==27 || Number(clicks.innerHTML)==28) {
             Swal.fire({
                 title: "Novice of the Arcane ",
-                html: "You’ve crossed into the seventh tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.<br>🔮",
+                html: "You’ve crossed into the seventh tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.<br><h1>🔮</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -184,7 +184,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)==26 || Number(clicks.innerHTML)==25) {
             Swal.fire({
                 title: "Initiate of the Veil ",
-                html:  "You’ve crossed into the sixth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks, you have crossed the threshold into esoteric knowledge.<br>🌕",
+                html:  "You’ve crossed into the sixth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks, you have crossed the threshold into esoteric knowledge.<br><h1>🌕</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -195,7 +195,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)==23 || Number(clicks.innerHTML)==24) {
             Swal.fire({
                 title: "Adept of the Stars ",
-                html:  "You’ve crossed into the fifth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.<br>✨",
+                html:  "You’ve crossed into the fifth tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.<br><h1>✨</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -206,7 +206,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)==22 || Number(clicks.innerHTML)==21) {
             Swal.fire({
                 title: "Guide of the Cosmos ",
-                html:  "You’ve crossed into the fourth tier of enlightenment.<br><br>" +clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.<br>🌌",
+                html:  "You’ve crossed into the fourth tier of enlightenment.<br><br>" +clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.<br><h1>🌌</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -217,7 +217,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)<=20 && Number(clicks.innerHTML)>=18) {
             Swal.fire({
                 title: "Guardian of Mysteries ",
-                html:  "You’ve crossed into the third tier of enlightenment.<br><br> " + "With "+clicks.innerHTML + " clicks, your connection to the universe strengthens.<br>🔱",
+                html:  "You’ve crossed into the third tier of enlightenment.<br><br> " + "With "+clicks.innerHTML + " clicks, your connection to the universe strengthens.<br><h1>🔱</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -228,7 +228,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)<=17 && Number(clicks.innerHTML)>=13) {
             Swal.fire({
                 title: "Master of Echoes ",
-                html: "You’ve crossed into the second tier of enlightenment.<br><br>" +"Just " + clicks.innerHTML + " clicks, the echoes of time and fate respond to your call.<br>🧿",
+                html: "You’ve crossed into the second tier of enlightenment.<br><br>" +"Just " + clicks.innerHTML + " clicks, the echoes of time and fate respond to your call.<br><h1>🧿</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
@@ -239,7 +239,7 @@ function checkMatch() {
         if(Number(clicks.innerHTML)==12) {
             Swal.fire({
                 title: "Ascended One ",
-                html: "May the light be with you.<br><br>" +"You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos! <br>🌟",
+                html: "May the light be with you.<br><br>" +"You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos! <br><h1>🌟</h1>",
                 confirmButtonText: "Reload",
                 background: "#e4dbc7",
             }).then(() => {
