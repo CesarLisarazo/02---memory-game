@@ -90,7 +90,7 @@ let cardsWon = [];
 let clicksEnabled = true; // Para controlar clics durante comparación
 frase.innerHTML=frases[numeroRandom]
 function createBoard() {
-    background.play()
+    background.play(); 
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
         card.setAttribute('src', 'images/card.jpeg');

@@ -153,6 +153,7 @@ text-align: center;
        height: 30px;
        line-height: 30px;  /* Igual al alto del div */
        animation: vanish 1s;
+       cursor: pointer;
 }
 @keyframes appear{ 
 0%{ opacity: 0.6; scale: 0.8;}
