@@ -284,6 +284,7 @@ function checkMatch() {
 function clearDisplay(){
     clicks.innerHTML=0;
     score.innerHTML=0
+    cardArray.sort(() => 0.5 - Math.random());
     gridDisplay.innerHTML=""
     numeroRandom=Math.floor(Math.random() * 60) ;   
  frase.innerHTML=frases[numeroRandom]
