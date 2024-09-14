@@ -88,7 +88,9 @@ let cardsChosen = [];
 let cardsChosenIds = [];
 let cardsWon = [];
 let clicksEnabled = true; // Para controlar clics durante comparación
+let music= true;
 frase.innerHTML=frases[numeroRandom]
+
 function createBoard() {
     background.play(); 
     for (let i = 0; i < 12; i++) {
