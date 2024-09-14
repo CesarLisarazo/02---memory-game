@@ -92,6 +92,7 @@ text-align: center;
   
 }
 #numbers{
+    background-color: crimson;
     width: 40vh;
   margin-left: 4vh;
 
@@ -100,7 +101,7 @@ text-align: center;
     height: 30px;
     
     display: flex;
-    justify-content: space-between;
+   
     padding-top: 20px;
    
 
@@ -117,12 +118,13 @@ text-align: center;
 }
 
 .tittle{
-   width: 8vh;
+    background-color: #8c95b893;
+   width: 33.3%;
     font-weight: lighter;
     color: #e9b036c0;
     font-size: small;
     text-align: left;
-    margin-right: 15px;
+   
        height: 30px;
        line-height: 30px;
        animation: vanish 1s;
@@ -132,8 +134,9 @@ text-align: center;
 }
 
 .tittle2{
-
-    text-align: center;
+    width: 33.3%;
+background-color: #e9b03667;
+    text-align: right;
     color: #e9b036c0;
     font-weight: lighter;
     font-size: small;
@@ -145,8 +148,9 @@ text-align: center;
 }
 
 .tittle3{
-    text-align: left;
-    width: 9vh;
+    background-color: blueviolet;
+    text-align: center;
+    width: 33.3%;
     color: #e9b036c0;
     font-weight: lighter;
     font-size: small;
