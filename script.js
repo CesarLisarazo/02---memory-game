@@ -77,7 +77,8 @@ let frases = [
 
 
 let numeroRandom=Math.floor(Math.random() * 60) ;
-
+let clickSound=document.getElementById('click-sound');
+let background= document.getElementById("background")
 cardArray.sort(() => 0.5 - Math.random());
 let frase= document.getElementById('frasecita')
 const gridDisplay = document.getElementById('grid');
@@ -89,6 +90,7 @@ let cardsWon = [];
 let clicksEnabled = true; // Para controlar clics durante comparación
 frase.innerHTML=frases[numeroRandom]
 function createBoard() {
+    background.play()
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
         card.setAttribute('src', 'images/card.jpeg');
@@ -100,7 +102,9 @@ function createBoard() {
 
 function flipCard() {
     console-console.log(cardArray);
-    
+    // Reinicia el audio cada vez que se hace clic
+    clickSound.currentTime=0;
+    clickSound.play();
     if (!clicksEnabled) return; // Bloquear clics si están deshabilitados
 
     clicks.innerHTML = Number(clicks.innerHTML) + 1;
