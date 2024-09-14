@@ -115,7 +115,7 @@ function flipCard() {
     clickSound.currentTime=0;
     clickSound.play();
      
-    console.log(gridDisplay)
+   
     console-console.log(cardArray);
     
 
@@ -285,7 +285,9 @@ function clearDisplay(){
     clicks.innerHTML=0;
     score.innerHTML=0
     gridDisplay.innerHTML=""
-    frase.innerHTML=frases[numeroRandom]
+    numeroRandom=Math.floor(Math.random() * 60) ;   
+ frase.innerHTML=frases[numeroRandom]
+  
    cardsWon = [];
     createBoard();
 
