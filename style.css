@@ -149,9 +149,12 @@ text-align: center;
 
 .tittle3{
 
-    text-align: center;
+    position: relative;
+    text-align: left;
+    left: 8%;
     width: 33.3%;
     color: #e9b036c0;
+ 
     font-weight: lighter;
     font-size: small;
        height: 30px;
