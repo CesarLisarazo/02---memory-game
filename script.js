@@ -92,14 +92,27 @@ let clicksEnabled = true; // Para controlar clics durante comparación
 let music= true;
 let sound = document.getElementById("sound")
 let final=document.getElementById("final")
+
 frase.innerHTML=frases[numeroRandom]
 
 
+sound.addEventListener("click", soundOnOff)
   
- 
+ function soundOnOff(){
+
+  
+    if(sound.innerHTML=="Off"){
+    
+        sound.innerHTML="On";
+      
+    }
+    else{
+        sound.innerHTML="Off"
+    }
+ }
 
   function createBoard() {
-    grid.play()
+   
 
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
@@ -111,6 +124,7 @@ frase.innerHTML=frases[numeroRandom]
 }
 
 function flipCard() {
+    playmusic()
     // Reinicia el audio cada vez que se hace clic
     clickSound.currentTime=0;
     clickSound.play();
@@ -120,9 +134,9 @@ function flipCard() {
     
 
     if(sound.innerHTML=="Off"){
-        background.play();
+    
         sound.innerHTML="On";
-        console.log(sound.innerHTML)
+      
     }
      
     
@@ -294,6 +308,20 @@ function clearDisplay(){
 
 
 
+}
+
+
+function playmusic(){
+
+
+    if (music==true){
+        background.play()
+        music=false
+    }
+
+    else{
+       return
+    }
 }
 
 createBoard();
