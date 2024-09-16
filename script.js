@@ -97,7 +97,8 @@ frase.innerHTML=frases[numeroRandom]
 
 
 sound.addEventListener("click", soundOnOff)
-  
+sound.addEventListener("click", playmusic)
+
  function soundOnOff(){
 
   
@@ -105,16 +106,26 @@ sound.addEventListener("click", soundOnOff)
     
         sound.innerHTML="Sound: On";
         background.play()
+        background.volume = 1;
+        gridSound.volume = 1;
+        clickSound.volume = 1;
+        final.volume = 1;
+     
       
     }
     else{
         sound.innerHTML="Sound: Off" 
-        background.pause()
+        background.volume = 0;
+        
+        gridSound.volume = 0;
+        clickSound.volume = 0;
+        final.volume = 0;
     }
  }
 
   function createBoard() {
     gridSound.play()
+  
 
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
@@ -126,8 +137,9 @@ sound.addEventListener("click", soundOnOff)
 }
 
 function flipCard() {
+  
 
-    playmusic()
+   
 
 
     // Reinicia el audio cada vez que se hace clic
@@ -319,6 +331,11 @@ function playmusic(){
     if (music==true){
         sound.innerHTML="Sound: On";
         background.play()
+        background.volume = 1;
+        background.volume = 1;
+        gridSound.volume = 1;
+        clickSound.volume = 1;
+        final.volume = 1;
         music=false
     }
 
