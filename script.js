@@ -101,13 +101,15 @@ sound.addEventListener("click", soundOnOff)
  function soundOnOff(){
 
   
-    if(sound.innerHTML=="Off"){
+    if(sound.innerHTML=="Sound: Off"){
     
-        sound.innerHTML="On";
+        sound.innerHTML="Sound: On";
+        background.play()
       
     }
     else{
-        sound.innerHTML="Off"
+        sound.innerHTML="Sound: Off"
+        background.pause()
     }
  }
 
@@ -124,20 +126,20 @@ sound.addEventListener("click", soundOnOff)
 }
 
 function flipCard() {
+
     playmusic()
+
+
     // Reinicia el audio cada vez que se hace clic
     clickSound.currentTime=0;
-    clickSound.play();
+    clickSound.play()
+  
      
    
  
     
 
-    if(sound.innerHTML=="Off"){
-    
-        sound.innerHTML="On";
-      
-    }
+  
      
     
 
@@ -315,6 +317,7 @@ function playmusic(){
 
 
     if (music==true){
+        sound.innerHTML="Sound: On";
         background.play()
         music=false
     }
