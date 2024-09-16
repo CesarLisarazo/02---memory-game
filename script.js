@@ -76,7 +76,7 @@ let frases = [
 ];
 
 
-let grid=document.getElementById("gridsound")
+let gridSound=document.getElementById("gridsound")
 let numeroRandom=Math.floor(Math.random() * 60) ;
 let clickSound=document.getElementById('click-sound');
 let background= document.getElementById("background")
@@ -108,13 +108,13 @@ sound.addEventListener("click", soundOnOff)
       
     }
     else{
-        sound.innerHTML="Sound: Off"
+        sound.innerHTML="Sound: Off" 
         background.pause()
     }
  }
 
   function createBoard() {
-   
+    gridSound.play()
 
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
