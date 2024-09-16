@@ -94,8 +94,11 @@ let sound = document.getElementById("sound")
 let final=document.getElementById("final")
 
 frase.innerHTML=frases[numeroRandom]
-
-
+background.volume = 0;
+        
+gridSound.volume = 0;
+clickSound.volume = 0;
+final.volume = 0;
 sound.addEventListener("click", soundOnOff)
 sound.addEventListener("click", playmusic)
 
