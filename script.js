@@ -76,7 +76,7 @@ let frases = [
 ];
 
 
-
+let grid=document.getElementById("gridsound")
 let numeroRandom=Math.floor(Math.random() * 60) ;
 let clickSound=document.getElementById('click-sound');
 let background= document.getElementById("background")
@@ -99,7 +99,7 @@ frase.innerHTML=frases[numeroRandom]
  
 
   function createBoard() {
-  
+    grid.play()
 
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
@@ -116,7 +116,7 @@ function flipCard() {
     clickSound.play();
      
    
-    console-console.log(cardArray);
+ 
     
 
     if(sound.innerHTML=="Off"){
