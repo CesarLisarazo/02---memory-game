@@ -344,7 +344,10 @@ function clearDisplay(){
     gridDisplay.innerHTML=""
     numeroRandom=Math.floor(Math.random() * 60) ;   
  frase.innerHTML=frases[numeroRandom]
-  
+ frase.style.animation = "none"; // Reinicia la animación
+setTimeout(() => {
+    frase.style.animation = "vanish 5s"; // Aplica la animación
+}, 10); // Pequeño retardo para permitir el reinicio
    cardsWon = [];
     createBoard();
 
