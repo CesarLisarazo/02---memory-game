@@ -77,10 +77,12 @@ let frases = [
 
 
 let gridSound=document.getElementById("gridsound")
+let match=document.getElementById("match")
 let numeroRandom=Math.floor(Math.random() * 60) ;
 let clickSound=document.getElementById('click-sound');
 let background= document.getElementById("background")
 cardArray.sort(() => 0.5 - Math.random());
+
 let frase= document.getElementById('frasecita')
 const gridDisplay = document.getElementById('grid');
 let score = document.getElementById('score');
@@ -99,6 +101,8 @@ background.volume = 0;
 gridSound.volume = 0;
 clickSound.volume = 0;
 final.volume = 0;
+match.volume=0;
+
 sound.addEventListener("click", soundOnOff)
 sound.addEventListener("click", playmusic)
 
@@ -113,6 +117,8 @@ sound.addEventListener("click", playmusic)
         gridSound.volume = 1;
         clickSound.volume = 1;
         final.volume = 1;
+        match.volume = 1;
+
      
       
     }
@@ -123,11 +129,13 @@ sound.addEventListener("click", playmusic)
         gridSound.volume = 0;
         clickSound.volume = 0;
         final.volume = 0;
+        match.volume = 0;
     }
  }
 
   function createBoard() {
     gridSound.play()
+    console.log(cardArray)
   
 
     for (let i = 0; i < 12; i++) {
@@ -184,6 +192,7 @@ function checkMatch() {
     clicksEnabled = true; // Habilitar clics de nuevo
 
     if (cardsChosen[0] === cardsChosen[1]) {
+        match.play()
         cards[optionOneId].removeEventListener('click', flipCard);
         cards[optionTwoId].removeEventListener('click', flipCard);
         cardsWon.push(cards[optionOneId]);
@@ -195,6 +204,18 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
+        match.volume=0;
+        setTimeout(() => {
+            if(background.volume==1){
+                match.volume=1;
+            }
+            else{
+                match.volume=0;
+            }
+
+          }, 750)
+
+
         final.play()
         if(Number(clicks.innerHTML)>=33  ) {
             Swal.fire({
@@ -307,6 +328,9 @@ function checkMatch() {
             });
         }
     }
+    else{
+      
+    }
 
     cardsChosen = [];
     cardsChosenIds = [];
@@ -316,6 +340,7 @@ function clearDisplay(){
     clicks.innerHTML=0;
     score.innerHTML=0
     cardArray.sort(() => 0.5 - Math.random());
+    
     gridDisplay.innerHTML=""
     numeroRandom=Math.floor(Math.random() * 60) ;   
  frase.innerHTML=frases[numeroRandom]
@@ -339,6 +364,7 @@ function playmusic(){
         gridSound.volume = 1;
         clickSound.volume = 1;
         final.volume = 1;
+        match.volume = 1;
         music=false
     }
 
