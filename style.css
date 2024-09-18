@@ -154,9 +154,14 @@ border: 0 ;
     height: 40px;
     border-radius: 4px;
     font-size: large;
-    font-family:'Times New Roman', Times, serif;
-
+    font-family:serif;
+    text-shadow: 0 2px 2px  #0b092b63;
    
+}
+.custom-confirm-button {
+    font-family:serif;
+    text-shadow: 0 2px 2px  #0b092b63;
+    letter-spacing: 0.5px;
 }
 
 #homeSound:active{

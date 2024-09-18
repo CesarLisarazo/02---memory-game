@@ -108,6 +108,9 @@ Swal.fire({
     confirmButtonText: "Start",
     background: "#e4dbc7",
     allowOutsideClick: false,
+    customClass: {
+        confirmButton: 'custom-confirm-button' // Aplica la clase personalizada al botón de confirmación
+      },
 }).then(() => {
     
     createBoard();
