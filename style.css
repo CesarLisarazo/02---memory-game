@@ -157,15 +157,18 @@ border: 0 ;
     font-family:serif;
     text-shadow: 0 2px 2px  #0b092b63;
    
+   
 }
 .custom-confirm-button {
     font-family:serif;
     text-shadow: 0 2px 2px  #0b092b63;
     letter-spacing: 0.5px;
+    
+ 
 }
 
 #homeSound:active{
-    background-color: #4b4596;
+    background-color: #5c56b6;
 
 }
 

@@ -104,7 +104,7 @@ final.volume = 0;
 match.volume=0;
 Swal.fire({
     
-    html:  " <h2>Play with sound?</h2><br><button id='homeSound' >Sound: Off</button>",
+    html:  " <h2 tabindex='0'>Play with sound?</h2><br><button id='homeSound' >Sound: Off</button>",
     confirmButtonText: "Start",
     background: "#e4dbc7",
     allowOutsideClick: false,
