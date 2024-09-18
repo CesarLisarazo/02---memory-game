@@ -88,7 +88,7 @@ text-align: center;
     font-size: smaller;
  
     height: 40px;
-    text-align: left;
+   
   
 }
 #numbers{
@@ -146,7 +146,18 @@ text-align: center;
       
    
 }
-
+#homeSound{
+    color:white;
+border: 0 ;
+    background-color: #7066e0;
+    width: 110px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: large;
+    font-family:'Times New Roman', Times, serif;
+ 
+   
+}
 .tittle3{
 
     position: relative;

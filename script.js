@@ -82,6 +82,7 @@ let numeroRandom=Math.floor(Math.random() * 60) ;
 let clickSound=document.getElementById('click-sound');
 let background= document.getElementById("background")
 cardArray.sort(() => 0.5 - Math.random());
+let numbers= document.getElementById("numbers")
 
 let frase= document.getElementById('frasecita')
 const gridDisplay = document.getElementById('grid');
@@ -94,14 +95,45 @@ let clicksEnabled = true; // Para controlar clics durante comparación
 let music= true;
 let sound = document.getElementById("sound")
 let final=document.getElementById("final")
-
-frase.innerHTML=frases[numeroRandom]
+numbers.style.display="none";
 background.volume = 0;
-        
+
 gridSound.volume = 0;
 clickSound.volume = 0;
 final.volume = 0;
 match.volume=0;
+Swal.fire({
+    
+    html:  " <h2>Play with sound?</h2><br><button id='homeSound' >Sound: Off</button>",
+    confirmButtonText: "Start",
+    background: "#e4dbc7",
+    allowOutsideClick: false,
+}).then(() => {
+    
+    createBoard();
+   
+});
+frase.style.display="none"
+
+    frase.innerHTML=frases[numeroRandom]
+
+
+
+
+let homeSound =document.getElementById("homeSound")
+
+homeSound.addEventListener("click",homeChange)
+function homeChange(){
+    if(homeSound.innerHTML=="Sound: Off"){
+        homeSound.innerHTML="Sound: On";
+        soundOnOff()
+    }
+    else{
+        homeSound.innerHTML="Sound: Off"
+        soundOnOff()
+
+    }
+}
 
 sound.addEventListener("click", soundOnOff)
 sound.addEventListener("click", playmusic)
@@ -135,8 +167,8 @@ sound.addEventListener("click", playmusic)
 
   function createBoard() {
     gridSound.play()
-    console.log(cardArray)
-  
+    frase.style.display="flex"
+    numbers.style.display="flex";
 
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
@@ -376,4 +408,3 @@ function playmusic(){
     }
 }
 
-createBoard();
