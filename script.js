@@ -96,6 +96,7 @@ let music= true;
 let sound = document.getElementById("sound")
 let final=document.getElementById("final")
 let toogle = document.getElementById("toogleIdiom")
+
 numbers.style.display="none";
 background.volume = 0;
 
@@ -138,6 +139,21 @@ function toogleChange(){
         toogle.innerHTML="English"
     }
 }
+
+let toogleHome=document.getElementById("homeIdiom")
+
+toogleHome.addEventListener("click",toogleHomeChange)
+function toogleHomeChange(){
+    if(toogleHome.innerHTML=="English"){
+        toogleHome.innerHTML="Español"
+    }
+    else{
+        toogleHome.innerHTML="English"
+    }
+}
+
+
+
 
 
 function homeChange(){
