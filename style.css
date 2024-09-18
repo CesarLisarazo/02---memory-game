@@ -155,9 +155,15 @@ border: 0 ;
     border-radius: 4px;
     font-size: large;
     font-family:'Times New Roman', Times, serif;
- 
+
    
 }
+
+#homeSound:active{
+    background-color: #4b4596;
+
+}
+
 .tittle3{
 
     position: relative;
