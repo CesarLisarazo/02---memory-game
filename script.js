@@ -95,6 +95,7 @@ let clicksEnabled = true; // Para controlar clics durante comparación
 let music= true;
 let sound = document.getElementById("sound")
 let final=document.getElementById("final")
+let toogle = document.getElementById("toogleIdiom")
 numbers.style.display="none";
 background.volume = 0;
 
@@ -103,18 +104,19 @@ clickSound.volume = 0;
 final.volume = 0;
 match.volume=0;
 Swal.fire({
-    
-    html:  " <h2 tabindex='0'>Play with sound?</h2><br><button id='homeSound' >Sound: Off</button>",
+    title: "Options",
+    html:  "<span class='homeText'>Play with sound?<span><br><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>Language/Idioma<span><br><button id='homeIdiom'>English</button>",
     confirmButtonText: "Start",
-    background: "#e4dbc7",
-    allowOutsideClick: false,
-    customClass: {
-        confirmButton: 'custom-confirm-button' // Aplica la clase personalizada al botón de confirmación
-      },
-}).then(() => {
-    
-    createBoard();
+   // Fondo del modal transparente
+    width:"40vh",
    
+    customClass: {
+        popup: 'custom-swal',  // Clase personalizada para el modal
+        confirmButton: 'custom-confirm-button'  // Clase personalizada para el botón de confirmación
+    },
+    allowOutsideClick: false
+}).then(() => {
+    createBoard();
 });
 frase.style.display="none"
 
@@ -124,8 +126,20 @@ frase.style.display="none"
 
 
 let homeSound =document.getElementById("homeSound")
-
 homeSound.addEventListener("click",homeChange)
+toogle.addEventListener("click",toogleChange)
+
+
+function toogleChange(){
+    if(toogle.innerHTML=="English"){
+        toogle.innerHTML="Español"
+    }
+    else{
+        toogle.innerHTML="English"
+    }
+}
+
+
 function homeChange(){
     if(homeSound.innerHTML=="Sound: Off"){
         homeSound.innerHTML="Sound: On";

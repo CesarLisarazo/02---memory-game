@@ -83,7 +83,7 @@ text-align: center;
  
 }
 #frasecita{
-    animation: vanish 5s;
+    animation: vanish 4s;
     color: #b48112;
     font-size: smaller;
  
@@ -119,7 +119,7 @@ text-align: center;
 
 .tittle{
 
-   width: 33.3%;
+    width:25%;
     font-weight: lighter;
     color: #e9b036c0;
     font-size: small;
@@ -134,7 +134,7 @@ text-align: center;
 }
 
 .tittle2{
-    width: 33.3%;
+    width:25%;
 
     text-align: right;
     color: #e9b036c0;
@@ -147,25 +147,66 @@ text-align: center;
    
 }
 #homeSound{
-    color:white;
-border: 0 ;
-    background-color: #7066e0;
-    width: 110px;
-    height: 40px;
-    border-radius: 4px;
-    font-size: large;
+    width: 100px;
+ 
+    color: rgb(248, 227, 185);
+    padding: 5px;
+    border-radius: 6px;
+    background-image: url(/images/button-.png);
+    background-size: cover;
+background-position: center;
+  
     font-family:serif;
     text-shadow: 0 2px 2px  #0b092b63;
    
    
 }
-.custom-confirm-button {
+
+.custom-swal:first-child{
+    font-family: "Vectis Monumental W01 Regular";
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0px 1px  rgba(255, 159, 114, 0.404);
+    height: 400px;
+    background-image:url("images/swal.jpg");
+background-size: cover;
+background-position: center;
+}
+
+.homeText{
+ 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#homeIdiom{
+    border-radius: 6px;
+    width: 100px;
+    padding: 5px;
     font-family:serif;
-    text-shadow: 0 2px 2px  #0b092b63;
-    letter-spacing: 0.5px;
-    
+    color: rgb(248, 227, 185);
+    background-color: transparent;
+    background-image: url(/images/button-.png);
+    background-size: cover;
+background-position: center;
  
 }
+.custom-confirm-button {
+    
+    border-radius: 6px;
+    width: 100px;
+    padding: 5px;
+    font-family:serif;
+    color: rgb(248, 227, 185);
+    background-color: transparent;
+    background-image: url(/images/button-.png);
+    background-size: cover;
+background-position: center;
+        
+       
+       
+    }
+    
+ 
+
 
 #homeSound:active{
     background-color: #5c56b6;
@@ -177,7 +218,7 @@ border: 0 ;
     position: relative;
     text-align: left;
     left: 7%;
-    width: 33.3%;
+    width:25%;
     color: #e9b036c0;
  
     font-weight: lighter;
@@ -186,6 +227,20 @@ border: 0 ;
        line-height: 30px;  /* Igual al alto del div */
        animation: vanish 1s;
        cursor: pointer;
+}
+
+#toogleIdiom{
+    font-family:serif;
+    width:25%;
+    text-align: right;
+    color: #e9b036c0;
+    font-weight: lighter;
+    font-size: small;
+    border: none;
+       height: 30px;
+       line-height: 30px;
+       animation: vanish 1s;
+       background-color: transparent;
 }
 @keyframes appear{ 
 0%{ opacity: 0.3; scale: 0.5;}
