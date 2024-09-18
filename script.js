@@ -106,11 +106,14 @@ final.volume = 0;
 match.volume=0;
 Swal.fire({
     title: "Options",
-    html:  "<span class='homeText'>Play with sound?<span><br><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>Language/Idioma<span><br><button id='homeIdiom'>English</button>",
+    html:  "<br><span class='homeText'>Play with sound?<span><br><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>Language/Idioma<span><br><button id='homeIdiom'>English</button><br><br>",
     confirmButtonText: "Start",
    // Fondo del modal transparente
     width:"40vh",
-   
+    imageUrl: "/images/arcane.png",
+  imageWidth: 400,
+  imageHeight: 55,
+  backdrop: `rgba(0, 0, 0, 1)`,
     customClass: {
         popup: 'custom-swal',  // Clase personalizada para el modal
         confirmButton: 'custom-confirm-button'  // Clase personalizada para el botón de confirmación
