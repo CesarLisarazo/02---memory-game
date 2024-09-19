@@ -182,6 +182,7 @@ background-position: top;
 
 .homeText{
     font-size: small;
+    text-shadow: 0 0px 3px black;
 
     color: rgb(209, 184, 133);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
