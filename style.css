@@ -181,11 +181,12 @@ background-position: top;
 }
 
 .homeText{
-    font-size: small;
-    text-shadow: 0 0px 3px black;
+    font-size: 15px;
+    text-shadow: 0px 0px 8px rgb(0, 0, 0);
+    
 
     color: rgb(209, 184, 133);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:serif;
 }
 
 #homeIdiom{
