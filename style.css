@@ -149,7 +149,7 @@ justify-content:center;
 }
 #homeSound{
     width: 90px;
- 
+    margin-top: 5px;
     color: #bb874f;
     padding: 5px;
     border-radius: 6px;
@@ -181,12 +181,14 @@ background-position: top;
 }
 
 .homeText{
-    background-color: rgba(0, 0, 0, 0.253);
+    font-size: small;
+
     color: rgb(209, 184, 133);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #homeIdiom{
+    margin-top: 5px;
     border-radius: 6px;
     width: 90px;
     padding: 5px;
