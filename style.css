@@ -148,9 +148,9 @@ justify-content:center;
    
 }
 #homeSound{
-    width: 120px;
+    width: 80px;
  
-    color: rgb(248, 227, 185);
+    color: #bb874f;
     padding: 5px;
     border-radius: 6px;
     background-color:#293339a8;
@@ -188,10 +188,10 @@ background-position: top;
 
 #homeIdiom{
     border-radius: 6px;
-    width: 120px;
+    width: 80px;
     padding: 5px;
     font-family:serif;
-    color: rgb(248, 227, 185);
+    color: #bb874f;
     background-color:#293339a8;
   
     background-size: cover;
@@ -201,10 +201,10 @@ background-position: center;
 .custom-confirm-button {
     
     border-radius: 6px;
-    width: 100px;
+    width: 80px;
     padding: 5px;
     font-family:serif;
-    color: rgb(248, 227, 185);
+    color: #bb874f;
     background-color:#293339a8;
   
     background-size: cover;
