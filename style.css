@@ -265,5 +265,5 @@ background-position: center;
 }
 @media screen and  (max-width: 900px){
     body{
-    background-image: url('https://i.pinimg.com//originals/52/30/ec/5230ec8a17b4e18bb006c10fc64aed30.jpg');
+    background-image: url("/images/fondo.jpg");
 }}
