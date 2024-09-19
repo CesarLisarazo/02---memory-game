@@ -210,7 +210,8 @@ background-position: center;
     font-family:serif;
     color: #bb874f;
     background-color:#293339a8;
-  
+    outline: none;  
+    box-shadow: none;
     background-size: cover;
 background-position: center;
         
@@ -218,8 +219,10 @@ background-position: center;
        
     }
     
- 
-
+    .custom-confirm-button:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
 
 
 
