@@ -146,6 +146,8 @@ let toogleHome=document.getElementById("homeIdiom")
 
 toogleHome.addEventListener("click",toogleHomeChange)
 function toogleHomeChange(){
+    match.currentTime=0;
+    match.play()
     if(toogleHome.innerHTML=="English"){
         toogleHome.innerHTML="Español"
     }
