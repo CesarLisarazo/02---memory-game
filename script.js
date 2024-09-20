@@ -105,7 +105,7 @@ final.volume = 0;
 match.volume=0;
 Swal.fire({
   
-    html:  " <br><br><br><br><br><span class='homeText'>Enable sound?<br></span><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>Language</span><br><button id='homeIdiom'>English</button><br><br>",
+    html:  " <br><br><br><br><span class='homeText'>Sound Off/On<br></span><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>English/Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
     confirmButtonText: "Start",
    // Fondo del modal transparente
     width:"40vh",
