@@ -175,7 +175,7 @@ Swal.fire({
  
   imageWidth: 400,
   imageHeight: 55,
-  backdrop: `#1e2228`,
+  backdrop: `#0f0603`,
     customClass: {
         popup: 'custom-swal',  // Clase personalizada para el modal
         confirmButton: 'custom-confirm-button'  // Clase personalizada para el botón de confirmación
