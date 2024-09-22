@@ -15,7 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('https://i.pinimg.com//originals/52/30/ec/5230ec8a17b4e18bb006c10fc64aed30.jpg');    background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
+    background-image: url('/images/fondo.jpg');    background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
     background-position: center; /* Esto centrará la imagen */
     
 }
@@ -34,13 +34,13 @@ h3, h4 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap:12px;
+    gap:13px;
     
 }
 
 #grid img {
-    width: 14vh;
-    height: 18vh;
+    width: 13vh;
+    height: 17vh;
    animation: appear 1s ease;
     border-radius: 8px;
     box-shadow: 0 4px 10px #414555d5;
@@ -148,15 +148,18 @@ justify-content:center;
    
 }
 #homeSound{
+    all: unset; 
+    font-size: 14px;
     width: 90px;
+    height: 20px;
     margin-top: 5px;
     color: #bb874f;
     padding: 5px;
     border-radius: 6px;
-    background-color:#293339d8;
+    background-color:#171e2280;
     background-size: cover;
 background-position: center;
-  
+box-shadow: 2px 2px 4px rgb(0, 0, 0);
     font-family:serif;
     text-shadow: 0 2px 2px  #0b092b63;
    
@@ -175,50 +178,73 @@ background-position: center;
         color: rgb(182, 169, 143);
     text-shadow: 0 0px 2px  rgba(44, 15, 1, 0.952);
   
-    background-image: url(/images/epic2.png);
+    background-image: url(/images/awesome2.png);
 background-size: cover;
 background-position: top;
 }
 
 .homeText{
-    font-size: 12px;
-    text-shadow: 0px 0px 10px rgb(0, 0, 0);
+    font-size: 13px;
+    text-shadow: 
+        -1px -1px 0 #251a0ee1,  
+        1px -1px 0 #251a0ee1,
+        -1px 1px 0#251a0ee1,
+        1px 1px 0 #251a0ee1;
     
 
     color: #bb874f;
     font-family:serif;
 }
+#homeSound:active {
+    transform: translate3d(0px, 1px, 0);}
+
 
 #homeIdiom{
+   all: unset; 
     margin-top: 5px;
     border-radius: 6px;
     width: 90px;
     padding: 5px;
+    font-size: 14px;
     font-family:serif;
     color: #bb874f;
-    background-color:#293339d8;
-  
+    background-color:#171e2280;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0);
     background-size: cover;
-background-position: center;
+background-position: center;    height: 20px;
  
 }
+
+
+#homeIdiom:active {
+    transform: translate3d(0px, 1px, 0);}
+    
+#homeIdiom:active {
+    transform: translate3d(0px, 2px, 0);}
+    
+
 .custom-confirm-button {
     
     border-radius: 6px;
-    width: 80px;
+    width: 100px;
     padding: 5px;
     font-family:serif;
+    font-size: large;
     color: #bb874f;
-    background-color:#293339d8;
+    background-color:#171e22;
     outline: none;  
     box-shadow: none;
     background-size: cover;
 background-position: center;
-        
-       
+        border: 1px solid #1f3844;
+box-shadow: 2px 2px 4px #232d33;;
+
        
     }
-    
+
+    .custom-confirm-button:active {
+    transform: translate3d(1px, 1px, 0);
+    }
     .custom-confirm-button:focus {
         outline: none !important;
         box-shadow: none !important;
@@ -260,9 +286,23 @@ background-position: center;
 0%{ opacity: 0.3; scale: 0.5;}
 100%{opacity: 1; scale:1;
 
+}}
+
+
+.end-swal{
+    background-image:url(/images/background.jpeg);
+    background-position: center;
+}
+.end-swal-button{
+    background-color:#293339ec;
+    color: #d1c29d;
 }
 
+.end-swal-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
+
 @keyframes vanish{
     0%{
         opacity: 0;
@@ -271,7 +311,9 @@ background-position: center;
         opacity: 1;
     }
 }
-@media screen and  (max-width: 900px){
-    body{
-    background-image: url("/images/fondo.jpg");
-}}
+
+
+.custom-title{
+
+    text-shadow: 0px 1px 3px #293339af;
+}

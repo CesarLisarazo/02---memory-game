@@ -13,6 +13,68 @@ const cardArray = [
     { name: 'the magician', img: 'images/the magician.png'},
 ];
 let frases = [
+    "Each card holds an echo of destiny, will you dare to listen?",
+    "Arcane echoes resonate with every draw, revealing the hidden.",
+    "Explore the shadows and the light, where mysteries await.",
+    "The cards whisper ancient truths, listen closely.",
+    "Your intuition is the key to unveiling the echoes of the past.",
+    "Within the cards lie answers only the soul can see.",
+    "With every pair found, a fragment of the arcane is revealed.",
+    "Feel the energy of the arcane resonate with every move.",
+    "In this memory game, the echoes of fate intertwine.",
+    "The tarot is a mirror, and each card, a reflection of the soul.",
+    "Reconnect with the arcane, where past and future converge.",
+    "The cards call you to uncover the footprints of destiny.",
+    "Each card is a window into arcane mysteries.",
+    "Reveal the echoes that connect the present with the eternal.",
+    "With each step, an arcane echo will guide you to the truth.",
+    "In every card, an arcane echo resonates through time.",
+    "Slide the cards, hear the echo of what was and what will be.",
+    "The echoes of fate vibrate within the mysteries of the tarot.",
+    "Through arcane echoes, wisdom unfolds in silence.",
+    "With each card revealed, the echo of destiny grows stronger.",
+    "Unlock the arcane echoes that guide you through the unknown.",
+    "Every turn of the card echoes with timeless wisdom.",
+    "The arcane calls, will you heed its ancient echoes?",
+    "Echoes of the universe lie hidden within each card.",
+    "Trust in the echoes of the past to reveal the future.",
+    "The cards reflect your soul, echoing truths untold.",
+    "In the silence of the arcane, the echoes of fate speak clearly.",
+    "Each card carries a whisper from the ancient realms.",
+    "Through the cards, the echoes of destiny unfold step by step.",
+    "The arcane resonates with every match, revealing hidden paths.",
+    "Echoes of long-lost secrets lie within each arcane symbol.",
+    "With every move, the echoes of fate grow stronger.",
+    "Reveal the arcane echoes that link the past, present, and future.",
+    "The tarot holds the echoes of journeys yet to be discovered.",
+    "In every card lies an echo of your soul’s hidden path.",
+    "Arcane echoes stir beneath the surface, waiting to be unveiled.",
+    "Step into the echoes of the unknown, where answers await.",
+    "Every card flipped echoes with the mysteries of time.",
+    "Dive into the echoes of the arcane, where the answers lie.",
+    "The arcane whispers in echoes only the heart can hear.",
+    "The echoes of ancient wisdom lie hidden in the cards.",
+    "Each shuffle stirs the arcane echoes waiting to be revealed.",
+    "In the quiet between the cards, echoes of truth emerge.",
+    "The cards align, and the echoes of fate become clear.",
+    "Every card holds a secret echo from the mysteries of the universe.",
+    "The arcane echoes grow louder with each step of your journey.",
+    "The answers you seek lie within the echoes of the tarot.",
+    "Flip the cards and let the arcane echoes guide your way.",
+    "Echoes of the arcane lead you through the path of discovery.",
+    "The cards resonate with echoes of the past, present, and future.",
+    "Feel the echoes of destiny ripple through every turn of the card.",
+    "The tarot speaks in echoes, guiding those who listen closely.",
+    "In the echoes of the arcane, new paths are revealed.",
+    "The mysteries of the universe echo through each tarot card.",
+    "With each pair you uncover, the arcane echoes grow stronger.",
+    "Let the arcane echoes guide your hand as you reveal each card.",
+    "Each flip reveals an echo of the cosmic dance of fate.",
+    "The tarot whispers, and its echoes unfold your destiny.",
+    "As the cards turn, the echoes of the arcane unveil their secrets.",
+    "In the echoes of each card, the path to wisdom is illuminated."
+];
+let frasesEs = [
     "Cada carta guarda un eco del destino, ¿te atreves a escuchar?",
     "Los ecos arcanos resuenan con cada tirada, revelando lo oculto.",
     "Explora las sombras y la luz, donde te esperan misterios.",
@@ -74,7 +136,7 @@ let frases = [
     "A medida que las cartas giran, los ecos de lo arcano revelan sus secretos.",
     "En los ecos de cada carta, el camino hacia la sabiduría se ilumina."
 ];
-
+let spanish=false
 let gridSound=document.getElementById("gridsound")
 let match=document.getElementById("match")
 let numeroRandom=Math.floor(Math.random() * 60) ;
@@ -105,18 +167,19 @@ final.volume = 0;
 match.volume=0;
 Swal.fire({
   
-    html:  " <br><br><br><br><span class='homeText'>Sound Off/On<br></span><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>English/Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
-    confirmButtonText: "Start",
+    html:  " <br><br><br><br><span id='soundOnOff'class='homeText'>Sound Off / On<br></span><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>English / Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
+    confirmButtonText: "Start!",
    // Fondo del modal transparente
     width:"40vh",
  
   imageWidth: 400,
   imageHeight: 55,
-  backdrop: `#1e2228`,
+  backdrop: `rgb(0, 0, 0)`,
     customClass: {
         popup: 'custom-swal',  // Clase personalizada para el modal
         confirmButton: 'custom-confirm-button'  // Clase personalizada para el botón de confirmación
     },
+ 
     allowOutsideClick: false
 }).then(() => {
     createBoard();
@@ -124,23 +187,18 @@ Swal.fire({
 frase.style.display="none"
 
     frase.innerHTML=frases[numeroRandom]
+   
+    let homeConfirmButton=document.querySelector('.custom-confirm-button')
+    console.log(homeConfirmButton.innerHTML)
 
 
-
-
+let homesoundOnOff=document.getElementById("soundOnOff")
 let homeSound =document.getElementById("homeSound")
 homeSound.addEventListener("click",homeChange)
 toogle.addEventListener("click",toogleChange)
 
 
-function toogleChange(){
-    if(toogle.innerHTML=="English"){
-        toogle.innerHTML="Español"
-    }
-    else{
-        toogle.innerHTML="English"
-    }
-}
+
 
 let toogleHome=document.getElementById("homeIdiom")
 
@@ -150,10 +208,40 @@ function toogleHomeChange(){
     match.play()
     if(toogleHome.innerHTML=="English"){
         toogleHome.innerHTML="Español"
+        spanish=true
+    
+        homesoundOnOff.innerHTML="Sonido 🗸 / X<br>"
+        homeConfirmButton.innerHTML="Comienza!"
+
+
     }
     else{
         toogleHome.innerHTML="English"
+        spanish=false
+        homesoundOnOff.innerHTML="Sound Off / On<br>"
+         homeConfirmButton.innerHTML="Start!"
     }
+
+
+console.log(spanish)
+
+
+}
+
+
+function toogleChange(){
+    
+    if(toogle.innerHTML=="English"){
+        toogle.innerHTML="Español"
+        spanish=true
+
+    }
+    else{
+        toogle.innerHTML="English"
+        spanish=false
+    }
+    console.log(spanish)
+
 }
 
 
@@ -161,6 +249,22 @@ function toogleHomeChange(){
 
 
 function homeChange(){
+if(spanish==true){
+    if(homeSound.innerHTML=="Sonido: X"){
+        homeSound.innerHTML="Sonido 🗸 ";
+        soundOnOff()
+    }
+    else{
+        homeSound.innerHTML="Sonido: X"
+        soundOnOff()
+
+    }
+
+
+}
+else{
+
+
     if(homeSound.innerHTML=="Sound: Off"){
         homeSound.innerHTML="Sound: On";
         soundOnOff()
@@ -170,7 +274,7 @@ function homeChange(){
         soundOnOff()
 
     }
-}
+}}
 
 sound.addEventListener("click", soundOnOff)
 sound.addEventListener("click", playmusic)
@@ -203,6 +307,7 @@ sound.addEventListener("click", playmusic)
  }
 
   function createBoard() {
+    console.log(cardArray)
     gridSound.play()
     frase.style.display="flex"
     numbers.style.display="flex";
@@ -291,7 +396,12 @@ function checkMatch() {
                 title: "The Lost Soul ",
                 html: "You’ve crossed into the #10 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.<br><h1>🌑</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+             
+                customClass: {
+                    popup: 'end-swal', 
+                     confirmButton: 'end-swal-button',
+                     title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -302,7 +412,12 @@ function checkMatch() {
                 title: "Seeker of Shadows ",
                 html:  "You’ve crossed into the #9 tier of enlightenment.<br><br>" + clicks.innerHTML +  " clicks. Still in darkness, you begin to perceive the shadows of hidden truths.<br><h1>🌒</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+             
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -313,7 +428,12 @@ function checkMatch() {
                 title: "Wandering Spirit ",
                 html:  "You’ve crossed into the #8 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks. Your spirit wanders, yet you feel the distant echo of illumination.<br><h1>🌀</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+              
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -324,7 +444,13 @@ function checkMatch() {
                 title: "Novice of the Arcane ",
                 html: "You’ve crossed into the #7 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.<br><h1>🔮</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+              
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                }
+,  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -335,7 +461,12 @@ function checkMatch() {
                 title: "Initiate of the Veil ",
                 html:  "You’ve crossed into the #6 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks, you have entered the threshold into esoteric knowledge.<br><h1>🌕</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+            
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -346,7 +477,12 @@ function checkMatch() {
                 title: "Adept of the Stars ",
                 html:  "You’ve crossed into the #5 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.<br><h1>✨</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+           
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -357,7 +493,12 @@ function checkMatch() {
                 title: "Guide of the Cosmos ",
                 html:  "You’ve crossed into the #4 tier of enlightenment.<br><br>" +clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.<br><h1>🌌</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+         
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -368,7 +509,13 @@ function checkMatch() {
                 title: "Guardian of Mysteries ",
                 html:  "You’ve crossed into the #3 tier of enlightenment.<br><br> " + "With "+clicks.innerHTML + " clicks, your connection to the universe strengthens.<br><h1>🔱</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+          
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
+
             }).then(() => {
                 clearDisplay();
             });
@@ -379,7 +526,12 @@ function checkMatch() {
                 title: "Master of Echoes ",
                 html: "You’ve crossed into the #2 tier of enlightenment.<br><br>" +"Just " + clicks.innerHTML + " clicks, the echoes of time and fate respond to your call.<br><h1>🧿</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+             
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -390,16 +542,19 @@ function checkMatch() {
                 title: "Ascended One ",
                 html: "May the light be with you.<br><br>" +"You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos! <br><h1>🌟</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+
+                customClass: {
+                    popup: 'end-swal', 
+                    confirmButton: 'end-swal-button',
+                    title: 'custom-title'
+                },  allowOutsideClick: false
             }).then(() => {
                
                 clearDisplay();
             });
         }
     }
-    else{
-      
-    }
+   
 
     cardsChosen = [];
     cardsChosenIds = [];
