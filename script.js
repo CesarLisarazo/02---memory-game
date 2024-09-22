@@ -189,7 +189,7 @@ frase.style.display="none"
     frase.innerHTML=frases[numeroRandom]
    
     let homeConfirmButton=document.querySelector('.custom-confirm-button')
-    console.log(homeConfirmButton.innerHTML)
+
 
 
 let homesoundOnOff=document.getElementById("soundOnOff")
@@ -223,25 +223,51 @@ function toogleHomeChange(){
     }
 
 
-console.log(spanish)
+
 
 
 }
 
 
 function toogleChange(){
+    if(spanish==true){
+        if(homeSound.innerHTML=="Sonido: X"){
+            homeSound.innerHTML="Sonido 🗸 ";
+            soundOnOff()
+        }
+        else{
+            homeSound.innerHTML="Sonido: X"
+            soundOnOff()
     
+        }
+    
+    
+    }
+    else{
+    
+    
+        if(homeSound.innerHTML=="Sound: Off"){
+            homeSound.innerHTML="Sound: On";
+            soundOnOff()
+        }
+        else{
+            homeSound.innerHTML="Sound: Off"
+            soundOnOff()
+    
+        }
+    }
     if(toogle.innerHTML=="English"){
         toogle.innerHTML="Español"
         spanish=true
-
+    
     }
     else{
         toogle.innerHTML="English"
         spanish=false
+        
     }
-    console.log(spanish)
-
+  
+    
 }
 
 
@@ -249,6 +275,7 @@ function toogleChange(){
 
 
 function homeChange(){
+   
 if(spanish==true){
     if(homeSound.innerHTML=="Sonido: X"){
         homeSound.innerHTML="Sonido 🗸 ";
