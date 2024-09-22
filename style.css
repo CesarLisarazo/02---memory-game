@@ -359,6 +359,7 @@ box-shadow:0px 0px 4px #e9b036c0;
 .end-swal-button{
     background-color:#293339ec;
     color: #d1c29d;
+    font-family: serif;
 }
 
 .end-swal-button:focus {
