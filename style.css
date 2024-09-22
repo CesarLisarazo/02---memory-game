@@ -92,18 +92,26 @@ justify-content:center;
    
   
 }
-#numbers{
+#numbersContainer{
+    display: flex;
+    justify-content:center;
+   
+    
+}
+#numbers{ width: 42vh;
  
-    width: 40vh;
-  margin-left: 4vh;
 
       color: #e9b036;
  font-size: smaller;
-    height: 30px;
+
     
     display: flex;
+   justify-content:space-between;
    
-    padding-top: 10px;
+  
+
+    padding-top: 15px;
+    overflow: hidden;
    
 
   
@@ -119,24 +127,27 @@ justify-content:center;
 }
 
 .tittle{
-
-    width:33.3%;
+    border: 2px solid #e9b03657;
+    border-radius: 8px;
+    width:12.5vh;
     font-weight: lighter;
     color: #e9b036c0;
     font-size: small;
-    text-align: left;
+    text-align: center;
    
-       height: 30px;
        line-height: 30px;
        animation: vanish 1s;
-       
+       background-color:#220a06d3;
+    
+       border: 1px solid #ecd8adb7;
+    box-shadow:0px 0px 4px #e9b036c0;
        
 
 }
 
 .tittle2{
     display: none;
-    width:33.3%;
+    width:none;
 
     text-align: right;
     color: #e9b036c0;
@@ -172,7 +183,7 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0);
 
 .custom-swal{
     width: 100vh;
-    height:95vh;
+    height:80vh;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -237,7 +248,7 @@ background-position: center;    height: 20px;
     color: #bb874f;
     background-color:#171e22;
     outline: none;  
-    box-shadow: none;
+ 
     background-size: cover;
 background-position: center;
         border: 1px solid #ecd8adfd;
@@ -260,32 +271,42 @@ box-shadow:0px 0px 4px #e9b036c0;
 
     position: relative;
     text-align: center;
-    border: 2px solid #e9b03657;
+    
     border-radius: 9px;
 
-    width:33.3%;
+    width:12.5vh;
     color: #e9b036c0;
  
     font-weight: lighter;
     font-size: small;
-       height: 30px;
-       line-height: 30px;  /* Igual al alto del div */
-       animation: vanish 1s;
-       cursor: pointer;
+    line-height: 30px;  /* Igual al alto del div */
+    animation: vanish 1s;
+    cursor: pointer;
+    
+    background-color:#220a06d3;
+    
+   border: 1px solid #ecd8adb7;
+box-shadow:0px 0px 4px #e9b036c0;
 }
 
 #toogleIdiom{
     font-family:serif;
-    width:30%;
-    text-align: right;
+    width:12.5vh;
+    text-align: center;
+    border: 2px solid #e9b03657;
+    border-radius: 9px;
+
     background-color: transparent;
     color: #e9b036c0;
     font-weight: lighter;
     font-size: small;
-    border: none;
-       height: 30px;
+
        line-height: 30px;
        animation: vanish 1s;
+       background-color:#220a06d3;
+    
+       border: 1px solid #ecd8adb7;
+    box-shadow:0px 0px 4px #e9b036c0;
  
 }
 @keyframes appear{ 

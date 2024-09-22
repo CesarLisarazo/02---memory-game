@@ -158,7 +158,8 @@ let music= true;
 let sound = document.getElementById("sound")
 let final=document.getElementById("final")
 let toogle = document.getElementById("toogleIdiom")
-
+let ArcaneEchoes= document.getElementById('Arcane-echoes')
+ArcaneEchoes.style.display="none";
 numbers.style.display="none";
 background.volume = 0;
 
@@ -168,14 +169,14 @@ final.volume = 0;
 match.volume=0;
 Swal.fire({
   
-    html:  " <br><br><br><br><br><br><br><br><span id='homeSoundOnOff' class='homeText'>Sound Off/On<br></span><button id='homeSound'>🔊</button><br><br><span class='homeText'>English/Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
+    html:  " <br><br><br><br><br><br><br><br><span id='homeSoundOnOff' class='homeText'>Sound Off / On<br></span><button id='homeSound'>🔊</button><br><br><span class='homeText'>English / Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
     confirmButtonText: "Start",
    // Fondo del modal transparente
     width:"40vh",
  
   imageWidth: 400,
   imageHeight: 55,
-  backdrop: `#0f0603`,
+
     customClass: {
         popup: 'custom-swal',  // Clase personalizada para el modal
         confirmButton: 'custom-confirm-button'  // Clase personalizada para el botón de confirmación
@@ -215,7 +216,7 @@ function toogleHomeChange(){
         toogleHome.innerHTML="English"
         toogle.innerHTML= toogleHome.innerHTML
     
-        homeSoundOnOff.innerHTML='Sound On/Off<br>'
+        homeSoundOnOff.innerHTML='Sound On / Off<br>'
         homeStart.innerHTML='Start!'
     }
   
@@ -305,6 +306,7 @@ sound.addEventListener("click", playmusic)
     gridSound.play()
     frase.style.display="flex"
     numbers.style.display="flex";
+    ArcaneEchoes.style.display="flex";
 
     for (let i = 0; i < 12; i++) {
         let card = document.createElement('img');
