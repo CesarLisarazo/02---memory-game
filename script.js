@@ -296,7 +296,7 @@ sound.addEventListener("click", soundOnOff)
  }
 
   function createBoard() {
-    console.log(cardArray)
+  
     if(toogle.innerHTML=='English'){
         
     frase.innerHTML=frases[numeroRandom];}
@@ -406,6 +406,7 @@ function checkMatch() {
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
                     },
+                    allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -416,12 +417,11 @@ function checkMatch() {
                 title: "The Lost Soul ",
                 html: "You’ve crossed into the #10 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.<br><h1>🌑</h1>",
                 confirmButtonText: "Reload",
-              
                 customClass: {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -438,7 +438,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -455,7 +455,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -474,7 +474,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -492,7 +492,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -511,7 +511,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -529,7 +529,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -548,7 +548,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -565,7 +565,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -584,7 +584,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -600,7 +600,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -620,7 +620,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -637,7 +637,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -656,7 +656,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -673,7 +673,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
@@ -691,7 +691,7 @@ function checkMatch() {
                         title:'custom-tittle',
                         popup: 'end-swal',  
                         confirmButton: 'end-swal-button'  
-                    },
+                    }, allowOutsideClick: false
                 }).then(() => {
                     clearDisplay();
                 });
@@ -710,7 +710,7 @@ function checkMatch() {
                     title:'custom-tittle',
                     popup: 'end-swal',  // Clase personalizada para el modal
                     confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
-                },
+                }, allowOutsideClick: false
             }).then(() => {
                 clearDisplay();
             });
