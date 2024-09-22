@@ -12,6 +12,7 @@ const cardArray = [
     { name: 'the lovers', img: 'images/the lovers.png' },
     { name: 'the magician', img: 'images/the magician.png'},
 ];
+
 let frases = [
     "Each card holds an echo of destiny, will you dare to listen?",
     "Arcane echoes resonate with every draw, revealing the hidden.",
@@ -74,7 +75,7 @@ let frases = [
     "As the cards turn, the echoes of the arcane unveil their secrets.",
     "In the echoes of each card, the path to wisdom is illuminated."
 ];
-let frasesEs = [
+let frasesEsp = [
     "Cada carta guarda un eco del destino, ¿te atreves a escuchar?",
     "Los ecos arcanos resuenan con cada tirada, revelando lo oculto.",
     "Explora las sombras y la luz, donde te esperan misterios.",
@@ -136,7 +137,7 @@ let frasesEs = [
     "A medida que las cartas giran, los ecos de lo arcano revelan sus secretos.",
     "En los ecos de cada carta, el camino hacia la sabiduría se ilumina."
 ];
-let spanish=false
+
 let gridSound=document.getElementById("gridsound")
 let match=document.getElementById("match")
 let numeroRandom=Math.floor(Math.random() * 60) ;
@@ -167,37 +168,34 @@ final.volume = 0;
 match.volume=0;
 Swal.fire({
   
-    html:  " <br><br><br><br><span id='soundOnOff'class='homeText'>Sound Off / On<br></span><button id='homeSound'>Sound: Off</button><br><br><span class='homeText'>English / Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
-    confirmButtonText: "Start!",
+    html:  " <br><br><br><br><span id='homeSoundOnOff' class='homeText'>Sound Off/On<br></span><button id='homeSound'>🔊</button><br><br><span class='homeText'>English/Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
+    confirmButtonText: "Start",
    // Fondo del modal transparente
     width:"40vh",
  
   imageWidth: 400,
   imageHeight: 55,
-  backdrop: `rgb(0, 0, 0)`,
+  backdrop: `#1e2228`,
     customClass: {
         popup: 'custom-swal',  // Clase personalizada para el modal
         confirmButton: 'custom-confirm-button'  // Clase personalizada para el botón de confirmación
     },
- 
     allowOutsideClick: false
 }).then(() => {
     createBoard();
 });
 frase.style.display="none"
 
-    frase.innerHTML=frases[numeroRandom]
    
-    let homeConfirmButton=document.querySelector('.custom-confirm-button')
 
+let homeStart= document.querySelector('.custom-confirm-button')
+let homeSoundOnOff= document.getElementById('homeSoundOnOff')
 
-
-let homesoundOnOff=document.getElementById("soundOnOff")
 let homeSound =document.getElementById("homeSound")
 homeSound.addEventListener("click",homeChange)
 toogle.addEventListener("click",toogleChange)
 
-
+console.log(homeStart.innerHTML)
 
 
 let toogleHome=document.getElementById("homeIdiom")
@@ -208,100 +206,53 @@ function toogleHomeChange(){
     match.play()
     if(toogleHome.innerHTML=="English"){
         toogleHome.innerHTML="Español"
-        spanish=true
-    
-        homesoundOnOff.innerHTML="Sonido 🗸 / X<br>"
-        homeConfirmButton.innerHTML="Comienza!"
+        homeSoundOnOff.innerHTML='Sonido Si / No<br>'
+        homeStart.innerHTML='Comienza!'
 
-
+        toogle.innerHTML= toogleHome.innerHTML
     }
     else{
         toogleHome.innerHTML="English"
-        spanish=false
-        homesoundOnOff.innerHTML="Sound Off / On<br>"
-         homeConfirmButton.innerHTML="Start!"
+        toogle.innerHTML= toogleHome.innerHTML
+    
+        homeSoundOnOff.innerHTML='Sound On/Off<br>'
+        homeStart.innerHTML='Start!'
     }
-
-
-
-
-
+  
 }
+
+toogle.innerHTML= toogleHome.innerHTML
 
 
 function toogleChange(){
-    if(spanish==true){
-        if(homeSound.innerHTML=="Sonido: X"){
-            homeSound.innerHTML="Sonido 🗸 ";
-            soundOnOff()
-        }
-        else{
-            homeSound.innerHTML="Sonido: X"
-            soundOnOff()
-    
-        }
-    
-    
-    }
-    else{
-    
-    
-        if(homeSound.innerHTML=="Sound: Off"){
-            homeSound.innerHTML="Sound: On";
-            soundOnOff()
-        }
-        else{
-            homeSound.innerHTML="Sound: Off"
-            soundOnOff()
-    
-        }
-    }
-    if(toogle.innerHTML=="English"){
-        toogle.innerHTML="Español"
-        spanish=true
-    
-    }
-    else{
-        toogle.innerHTML="English"
-        spanish=false
-        
-    }
-  
-    
+  if(toogle.innerHTML=="English" ){
+    toogle.innerHTML="Español" 
+    frase.innerHTML=frasesEsp[numeroRandom]
+
+
+  }else{
+    toogle.innerHTML="English" 
+    frase.innerHTML=frases[numeroRandom]
+  }
+      
 }
+
 
 
 
 
 
 function homeChange(){
-   
-if(spanish==true){
-    if(homeSound.innerHTML=="Sonido: X"){
-        homeSound.innerHTML="Sonido 🗸 ";
+    if(homeSound.innerHTML=="🔊"){
+        homeSound.innerHTML="🔈❌";
         soundOnOff()
     }
     else{
-        homeSound.innerHTML="Sonido: X"
+        homeSound.innerHTML="🔊"
         soundOnOff()
 
     }
-
-
 }
-else{
-
-
-    if(homeSound.innerHTML=="Sound: Off"){
-        homeSound.innerHTML="Sound: On";
-        soundOnOff()
-    }
-    else{
-        homeSound.innerHTML="Sound: Off"
-        soundOnOff()
-
-    }
-}}
 
 sound.addEventListener("click", soundOnOff)
 sound.addEventListener("click", playmusic)
@@ -309,9 +260,9 @@ sound.addEventListener("click", playmusic)
  function soundOnOff(){
 
   
-    if(sound.innerHTML=="Sound: Off"){
+    if(sound.innerHTML=="🔊"){
     
-        sound.innerHTML="Sound: On";
+        sound.innerHTML="🔈❌";
         background.play()
         background.volume = 1;
         gridSound.volume = 1;
@@ -323,7 +274,7 @@ sound.addEventListener("click", playmusic)
       
     }
     else{
-        sound.innerHTML="Sound: Off" 
+        sound.innerHTML="🔊" 
         background.volume = 0;
         
         gridSound.volume = 0;
@@ -334,7 +285,11 @@ sound.addEventListener("click", playmusic)
  }
 
   function createBoard() {
-    console.log(cardArray)
+    if(toogle.innerHTML=='English'){
+    frase.innerHTML=frases[numeroRandom];}
+    else{
+        frase.innerHTML=frasesEsp[numeroRandom];   
+    }
     gridSound.play()
     frase.style.display="flex"
     numbers.style.display="flex";
@@ -423,12 +378,7 @@ function checkMatch() {
                 title: "The Lost Soul ",
                 html: "You’ve crossed into the #10 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.<br><h1>🌑</h1>",
                 confirmButtonText: "Reload",
-             
-                customClass: {
-                    popup: 'end-swal', 
-                     confirmButton: 'end-swal-button',
-                     title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -439,12 +389,7 @@ function checkMatch() {
                 title: "Seeker of Shadows ",
                 html:  "You’ve crossed into the #9 tier of enlightenment.<br><br>" + clicks.innerHTML +  " clicks. Still in darkness, you begin to perceive the shadows of hidden truths.<br><h1>🌒</h1>",
                 confirmButtonText: "Reload",
-             
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -455,12 +400,7 @@ function checkMatch() {
                 title: "Wandering Spirit ",
                 html:  "You’ve crossed into the #8 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks. Your spirit wanders, yet you feel the distant echo of illumination.<br><h1>🌀</h1>",
                 confirmButtonText: "Reload",
-              
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -471,13 +411,7 @@ function checkMatch() {
                 title: "Novice of the Arcane ",
                 html: "You’ve crossed into the #7 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.<br><h1>🔮</h1>",
                 confirmButtonText: "Reload",
-              
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                }
-,  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -488,12 +422,7 @@ function checkMatch() {
                 title: "Initiate of the Veil ",
                 html:  "You’ve crossed into the #6 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks, you have entered the threshold into esoteric knowledge.<br><h1>🌕</h1>",
                 confirmButtonText: "Reload",
-            
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -504,12 +433,7 @@ function checkMatch() {
                 title: "Adept of the Stars ",
                 html:  "You’ve crossed into the #5 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.<br><h1>✨</h1>",
                 confirmButtonText: "Reload",
-           
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -520,12 +444,7 @@ function checkMatch() {
                 title: "Guide of the Cosmos ",
                 html:  "You’ve crossed into the #4 tier of enlightenment.<br><br>" +clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.<br><h1>🌌</h1>",
                 confirmButtonText: "Reload",
-         
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -536,13 +455,7 @@ function checkMatch() {
                 title: "Guardian of Mysteries ",
                 html:  "You’ve crossed into the #3 tier of enlightenment.<br><br> " + "With "+clicks.innerHTML + " clicks, your connection to the universe strengthens.<br><h1>🔱</h1>",
                 confirmButtonText: "Reload",
-          
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
-
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -553,12 +466,7 @@ function checkMatch() {
                 title: "Master of Echoes ",
                 html: "You’ve crossed into the #2 tier of enlightenment.<br><br>" +"Just " + clicks.innerHTML + " clicks, the echoes of time and fate respond to your call.<br><h1>🧿</h1>",
                 confirmButtonText: "Reload",
-             
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                 clearDisplay();
             });
@@ -569,19 +477,16 @@ function checkMatch() {
                 title: "Ascended One ",
                 html: "May the light be with you.<br><br>" +"You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos! <br><h1>🌟</h1>",
                 confirmButtonText: "Reload",
-
-                customClass: {
-                    popup: 'end-swal', 
-                    confirmButton: 'end-swal-button',
-                    title: 'custom-title'
-                },  allowOutsideClick: false
+                background: "#e4dbc7",
             }).then(() => {
                
                 clearDisplay();
             });
         }
     }
-   
+    else{
+      
+    }
 
     cardsChosen = [];
     cardsChosenIds = [];
@@ -594,6 +499,7 @@ function clearDisplay(){
     
     gridDisplay.innerHTML=""
     numeroRandom=Math.floor(Math.random() * 60) ;   
+
  frase.innerHTML=frases[numeroRandom]
  frase.style.animation = "none"; // Reinicia la animación
 setTimeout(() => {
@@ -611,7 +517,7 @@ function playmusic(){
 
 
     if (music==true){
-        sound.innerHTML="Sound: On";
+        sound.innerHTML="🔈❌";
         background.play()
         background.volume = 1;
         background.volume = 1;
