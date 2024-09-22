@@ -254,7 +254,7 @@ setTimeout(() => {
 
 function homeChange(){
     if(homeSound.innerHTML=="🔊"){
-        homeSound.innerHTML="🔈❌";
+        homeSound.innerHTML="🔈-";
         soundOnOff()
     }
     else{
@@ -272,7 +272,7 @@ sound.addEventListener("click", playmusic)
   
     if(sound.innerHTML=="🔊"){
     
-        sound.innerHTML="🔈❌";
+        sound.innerHTML="🔈-";
         background.play()
         background.volume = 1;
         gridSound.volume = 1;
@@ -789,7 +789,7 @@ function playmusic(){
 
 
     if (music==true){
-        sound.innerHTML="🔈❌";
+        sound.innerHTML="🔈-";
         background.play()
         background.volume = 1;
         background.volume = 1;
