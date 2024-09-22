@@ -149,7 +149,8 @@ justify-content:center;
    
 }
 #homeSound{
-    all: unset; 
+    all: unset;
+    display: n; 
     font-size: 14px;
     width: 90px;
     height: 20px;
@@ -162,10 +163,12 @@ justify-content:center;
 background-position: center;
 box-shadow: 2px 2px 4px rgb(0, 0, 0);
     font-family:serif;
-    text-shadow: 0 2px 2px  #0b092b63;
+    text-shadow: 0px 0px 3px   #ecd8adfd; ;
+
    
    
 }
+
 
 .custom-swal{
     width: 100vh;
