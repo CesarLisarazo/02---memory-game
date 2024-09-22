@@ -166,6 +166,8 @@ gridSound.muted = true;
 clickSound.muted = true;
 final.muted = true;
 match.muted = true;
+let reloadGame=document.getElementById("reloadGame")
+reloadGame.addEventListener("click",clearDisplay)
 Swal.fire({
   
     html:  " <br><br><br><br><br><br><br><br><span id='homeSoundOnOff' class='homeText'>Sound Off / On<br></span><button id='homeSound'>🔊</button><br><br><span class='homeText'>English / Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
@@ -241,7 +243,7 @@ setTimeout(() => {
     frase.style.animation = "none"; // Reinicia la animación
 setTimeout(() => {
     frase.style.animation = "vanish 3s"; // Aplica la animación
-}, 1);
+}, 0);
   
   }
       
@@ -374,7 +376,9 @@ function checkMatch() {
     if (score.innerHTML == cardArray.length / 2) {
         match.muted=true;
         setTimeout(() => {
-            if(background.muted=false){
+
+
+            if(background.muted==false){
                 match.muted=false;
             }
             else{
