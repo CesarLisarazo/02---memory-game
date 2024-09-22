@@ -161,12 +161,11 @@ let toogle = document.getElementById("toogleIdiom")
 let ArcaneEchoes= document.getElementById('Arcane-echoes')
 ArcaneEchoes.style.display="none";
 numbers.style.display="none";
-background.volume = 0;
-
-gridSound.volume = 0;
-clickSound.volume = 0;
-final.volume = 0;
-match.volume=0;
+background.muted = true;
+gridSound.muted = true;
+clickSound.muted = true;
+final.muted = true;
+match.muted = true;
 Swal.fire({
   
     html:  " <br><br><br><br><br><br><br><br><span id='homeSoundOnOff' class='homeText'>Sound Off / On<br></span><button id='homeSound'>🔊</button><br><br><span class='homeText'>English / Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
@@ -275,23 +274,22 @@ sound.addEventListener("click", playmusic)
     
         sound.innerHTML="🔈-";
         background.play()
-        background.volume = 1;
-        gridSound.volume = 1;
-        clickSound.volume = 1;
-        final.volume = 1;
-        match.volume = 1;
+        background.muted = false;
+        gridSound.muted = false;
+        clickSound.muted = false;
+        final.muted = false;
+        match.muted = false;
 
      
       
     }
     else{
         sound.innerHTML="🔊" 
-        background.volume = 0;
-        
-        gridSound.volume = 0;
-        clickSound.volume = 0;
-        final.volume = 0;
-        match.volume = 0;
+        background.muted = true;
+        gridSound.muted = true;
+        clickSound.muted = true;
+        final.muted = true;
+        match.muted = true;
     }
  }
 
@@ -374,13 +372,13 @@ function checkMatch() {
     }
 
     if (score.innerHTML == cardArray.length / 2) {
-        match.volume=0;
+        match.muted=true;
         setTimeout(() => {
-            if(background.volume==1){
-                match.volume=1;
+            if(background.muted=false){
+                match.muted=false;
             }
             else{
-                match.volume=0;
+                match.muted=true;
             }
 
           }, 750)
@@ -793,12 +791,11 @@ function playmusic(){
     if (music==true){
         sound.innerHTML="🔈-";
         background.play()
-        background.volume = 1;
-        background.volume = 1;
-        gridSound.volume = 1;
-        clickSound.volume = 1;
-        final.volume = 1;
-        match.volume = 1;
+        background.muted = false;
+        gridSound.muted = false;
+        clickSound.muted = false;
+        final.muted = false;
+        match.muted = false;
         music=false
     }
 
