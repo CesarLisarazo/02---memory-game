@@ -195,7 +195,7 @@ let homeSound =document.getElementById("homeSound")
 homeSound.addEventListener("click",homeChange)
 toogle.addEventListener("click",toogleChange)
 
-console.log(homeStart.innerHTML)
+
 
 
 let toogleHome=document.getElementById("homeIdiom")
@@ -228,11 +228,21 @@ function toogleChange(){
   if(toogle.innerHTML=="English" ){
     toogle.innerHTML="Español" 
     frase.innerHTML=frasesEsp[numeroRandom]
+    frase.style.animation = "none"; // Reinicia la animación
+setTimeout(() => {
+    frase.style.animation = "vanish 3s"; // Aplica la animación
+}, 1);
+   
 
 
   }else{
     toogle.innerHTML="English" 
     frase.innerHTML=frases[numeroRandom]
+    frase.style.animation = "none"; // Reinicia la animación
+setTimeout(() => {
+    frase.style.animation = "vanish 3s"; // Aplica la animación
+}, 1);
+  
   }
       
 }
@@ -285,7 +295,9 @@ sound.addEventListener("click", playmusic)
  }
 
   function createBoard() {
+    console.log(cardArray)
     if(toogle.innerHTML=='English'){
+        
     frase.innerHTML=frases[numeroRandom];}
     else{
         frase.innerHTML=frasesEsp[numeroRandom];   
@@ -373,120 +385,380 @@ function checkMatch() {
 
 
         final.play()
+
+        /*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
         if(Number(clicks.innerHTML)>=33  ) {
+
+
+            if(toogle.innerHTML=='Español'){
+
+                Swal.fire({
+                    title: "El Alma Perdida",
+                    html: "Has cruzado al nivel #10 de iluminación.<br><br>" + clicks.innerHTML + " clics... Estás atrapado en el laberinto de la existencia, buscando una chispa de luz.<br><h1>🌑</h1>",
+                    confirmButtonText: "Recargar",
+                  
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+
+            }
+            else{
             Swal.fire({
                 title: "The Lost Soul ",
                 html: "You’ve crossed into the #10 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You are trapped in the labyrinth of existence, searching for a spark of light.<br><h1>🌑</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+              
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)==32 || Number(clicks.innerHTML)==31) {
+            if(toogle.innerHTML=='Español'){
+                Swal.fire({
+                    title: "Buscador de Sombras",
+                    html: "Has cruzado al nivel #9 de iluminación.<br><br>" + clicks.innerHTML +  " clics. Todavía en la oscuridad, comienzas a percibir las sombras de verdades ocultas.<br><h1>🌒</h1>",
+                    confirmButtonText: "Recargar",
+                   
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+            }
+            else{
+          
+          
             Swal.fire({
                 title: "Seeker of Shadows ",
                 html:  "You’ve crossed into the #9 tier of enlightenment.<br><br>" + clicks.innerHTML +  " clicks. Still in darkness, you begin to perceive the shadows of hidden truths.<br><h1>🌒</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+               
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)==29 || Number(clicks.innerHTML)==30) {
+
+
+            if(toogle.innerHTML=='Español'){
+                Swal.fire({
+                    title: "Espíritu Errante",
+                    html: "Has cruzado al nivel #8 de iluminación.<br><br>" + clicks.innerHTML + " clics. Tu espíritu vaga, pero sientes el eco distante de la iluminación.<br><h1>🌀</h1>",
+                    confirmButtonText: "Recargar",
+                 
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+
+
+
+            }
+            else{
             Swal.fire({
                 title: "Wandering Spirit ",
                 html:  "You’ve crossed into the #8 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks. Your spirit wanders, yet you feel the distant echo of illumination.<br><h1>🌀</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+             
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)==27 || Number(clicks.innerHTML)==28) {
+
+            if(toogle.innerHTML=='Español'){
+
+                Swal.fire({
+                    title: "Novato de lo Arcano",
+                    html: "Has cruzado al nivel #7 de iluminación.<br><br>" + clicks.innerHTML + " clics... Has dado tus primeros pasos, pero queda mucho por descubrir.<br><h1>🔮</h1>",
+                    confirmButtonText: "Recargar",
+                  
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+
+            }
+            else{
+
+
             Swal.fire({
                 title: "Novice of the Arcane ",
                 html: "You’ve crossed into the #7 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You've taken your first steps, but much remains to be uncovered.<br><h1>🔮</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+              
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)==26 || Number(clicks.innerHTML)==25) {
+
+
+            if(toogle.innerHTML=='Español'){
+                Swal.fire({
+                    title: "Iniciado del Velo",
+                    html: "Has cruzado al nivel #6 de iluminación.<br><br>" + clicks.innerHTML + " clics, has entrado al umbral del conocimiento esotérico.<br><h1>🌕</h1>",
+                    confirmButtonText: "Recargar",
+              
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+            }
+
+
+            else{
             Swal.fire({
                 title: "Initiate of the Veil ",
                 html:  "You’ve crossed into the #6 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks, you have entered the threshold into esoteric knowledge.<br><h1>🌕</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+          
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)==23 || Number(clicks.innerHTML)==24) {
+
+
+            if(toogle.innerHTML=='Español'){
+                Swal.fire({
+                    title: "Adepto de las Estrellas",
+                    html: "Has cruzado al nivel #5 de iluminación.<br><br>" + clicks.innerHTML + " clics... Has comenzado a navegar las estrellas, dominando secretos cósmicos.<br><h1>✨</h1>",
+                    confirmButtonText: "Recargar",
+            
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+
+            }
+            else{
             Swal.fire({
                 title: "Adept of the Stars ",
                 html:  "You’ve crossed into the #5 tier of enlightenment.<br><br>" + clicks.innerHTML + " clicks... You have begun to navigate the stars, mastering cosmic secrets.<br><h1>✨</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+   
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)==22 || Number(clicks.innerHTML)==21) {
+
+
+            if(toogle.innerHTML=='Español'){
+
+                Swal.fire({
+                    title: "Guía del Cosmos",
+                    html: "Has cruzado al nivel #4 de iluminación.<br><br>" + clicks.innerHTML + " clics... El cosmos empieza a revelarse bajo tu mirada.<br><h1>🌌</h1>",
+                    confirmButtonText: "Recargar",
+             
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+
+
+            }
+            else{
             Swal.fire({
                 title: "Guide of the Cosmos ",
                 html:  "You’ve crossed into the #4 tier of enlightenment.<br><br>" +clicks.innerHTML + " clicks... The cosmos starts to reveal its meaning under your gaze.<br><h1>🌌</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+     
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)<=20 && Number(clicks.innerHTML)>=18) {
+
+            if(toogle.innerHTML=='Español'){
+
+                Swal.fire({
+                    title: "Guardián de los Misterios",
+                    html: "Has cruzado al nivel #3 de iluminación.<br><br> " + "Con "+clicks.innerHTML + " clics, tu conexión con el universo se fortalece.<br><h1>🔱</h1>",
+                    confirmButtonText: "Recargar",
+              
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+            }
+            else{
+
+
             Swal.fire({
                 title: "Guardian of Mysteries ",
                 html:  "You’ve crossed into the #3 tier of enlightenment.<br><br> " + "With "+clicks.innerHTML + " clicks, your connection to the universe strengthens.<br><h1>🔱</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+          
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
         if(Number(clicks.innerHTML)<=17 && Number(clicks.innerHTML)>=13) {
+            if(toogle.innerHTML=='Español'){
+
+                Swal.fire({
+                    title: "Maestro de los Ecos",
+                    html: "Has cruzado al nivel #2 de iluminación.<br><br>" + "Solo " + clicks.innerHTML + " clics, los ecos del tiempo y el destino responden a tu llamado.<br><h1>🧿</h1>",
+                    confirmButtonText: "Recargar",
+               
+                    customClass: {
+                        title:'custom-tittle',
+                        popup: 'end-swal',  
+                        confirmButton: 'end-swal-button'  
+                    },
+                }).then(() => {
+                    clearDisplay();
+                });
+
+            }
+            else{
+
+
+
             Swal.fire({
                 title: "Master of Echoes ",
                 html: "You’ve crossed into the #2 tier of enlightenment.<br><br>" +"Just " + clicks.innerHTML + " clicks, the echoes of time and fate respond to your call.<br><h1>🧿</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+       
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                 clearDisplay();
             });
-        }
+        }}
     
+
+
+
+
+
+
         if(Number(clicks.innerHTML)==12) {
+
+            if(toogle.innerHTML=='Español'){
+                if(Number(clicks.innerHTML)==12) {
+                    Swal.fire({
+                        title: "El Ascendido",
+                        html: "Que la luz esté contigo.<br><br>" + "¡Has alcanzado la iluminación total con " + clicks.innerHTML + " clics! Maestro del cosmos! <br><h1>🌟</h1>",
+                        confirmButtonText: "Recargar",
+                
+                        customClass: {
+                            title:'custom-tittle',
+                            popup: 'end-swal',  
+                            confirmButton: 'end-swal-button'  
+                        },
+                    }).then(() => {
+                        clearDisplay();
+                    });
+                }
+
+            }
+            else{
+
             Swal.fire({
                 title: "Ascended One ",
                 html: "May the light be with you.<br><br>" +"You have achieved total enlightenment with " + clicks.innerHTML + " clicks! Master of the cosmos! <br><h1>🌟</h1>",
                 confirmButtonText: "Reload",
-                background: "#e4dbc7",
+    
+                customClass: {
+                    title:'custom-tittle',
+                    popup: 'end-swal',  // Clase personalizada para el modal
+                    confirmButton: 'end-swal-button'  // Clase personalizada para el botón de confirmación
+                },
             }).then(() => {
                
                 clearDisplay();
             });
-        }
+       
+       
+        }}
     }
-    else{
-      
-    }
+   
 
     cardsChosen = [];
     cardsChosenIds = [];
