@@ -256,7 +256,7 @@ setTimeout(() => {
 
 function homeChange(){
     if(homeSound.innerHTML=="🔊"){
-        homeSound.innerHTML="🔈-";
+        homeSound.innerHTML="🔈";
         soundOnOff()
     }
     else{
@@ -266,15 +266,15 @@ function homeChange(){
     }
 }
 
+
 sound.addEventListener("click", soundOnOff)
-sound.addEventListener("click", playmusic)
 
  function soundOnOff(){
 
   
     if(sound.innerHTML=="🔊"){
     
-        sound.innerHTML="🔈-";
+        sound.innerHTML="🔈";
         background.play()
         background.muted = false;
         gridSound.muted = false;
@@ -789,22 +789,4 @@ setTimeout(() => {
 }
 
 
-function playmusic(){
-
-
-    if (music==true){
-        sound.innerHTML="🔈-";
-        background.play()
-        background.muted = false;
-        gridSound.muted = false;
-        clickSound.muted = false;
-        final.muted = false;
-        match.muted = false;
-        music=false
-    }
-
-    else{
-       return
-    }
-}
 
