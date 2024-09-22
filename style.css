@@ -308,7 +308,7 @@ text-shadow:
     color: #e9b036c0;
  
     font-weight:bold;
-    font-size: small;
+  
     line-height: 30px;  /* Igual al alto del div */
     animation: vanish 1s;
     cursor: pointer;
