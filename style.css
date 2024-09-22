@@ -168,8 +168,8 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 .custom-swal{
-    width: 80%;
-    height: 100%;
+    width: 100vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -179,7 +179,7 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0);
         color: rgb(182, 169, 143);
     text-shadow: 0 0px 2px  rgba(44, 15, 1, 0.952);
   
-    background-image: url(/images/awesome.png);
+    background-image: url(/images/awesome2.png);
 background-size: cover;
 background-position: top;
 }
@@ -237,8 +237,8 @@ background-position: center;    height: 20px;
     box-shadow: none;
     background-size: cover;
 background-position: center;
-        border: 1px solid #1f3844;
-box-shadow: 2px 2px 4px #232d33;;
+        border: 1px solid #ecd8adfd;
+box-shadow:0px 0px 4px #e9b036c0;
 
        
     }
