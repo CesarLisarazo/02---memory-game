@@ -187,11 +187,13 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0);
 
 
 .custom-swal{
-    width: 100vh;
-    height:80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+    width: 100vw !important; 
+    height: 100vh !important;
+    max-width: 100vw !important; 
+    max-height: 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+ 
     
  font-family:serif;
 
@@ -201,6 +203,9 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0);
     background-image: url(/images/awesome2.png);
 background-size: cover;
 background-position: top;
+
+
+
 }
 
 .homeText{
