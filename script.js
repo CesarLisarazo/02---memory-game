@@ -182,6 +182,15 @@ Swal.fire({
     },
     allowOutsideClick: false
 }).then(() => {
+       const docElement = document.documentElement;
+
+    if (docElement.requestFullscreen) {
+      docElement.requestFullscreen();
+    } else if (docElement.webkitRequestFullscreen) {
+      docElement.webkitRequestFullscreen(); // Para Safari y Chrome en iOS
+    } else if (docElement.msRequestFullscreen) {
+      docElement.msRequestFullscreen(); // Para IE/Edge
+    }
     createBoard();
 });
 frase.style.display="none"
