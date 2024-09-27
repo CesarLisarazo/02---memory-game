@@ -234,6 +234,8 @@ toogle.innerHTML= toogleHome.innerHTML
 
 
 function toogleChange(){
+      match.currentTime=0;
+    match.play()
   if(toogle.innerHTML=="English" ){
     toogle.innerHTML="Español" 
     frase.innerHTML=frasesEsp[numeroRandom]
