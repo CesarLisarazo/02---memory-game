@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+ 
 }
 button, a, input,img ,h3{
     -webkit-tap-highlight-color: transparent; /* Para Safari y Chrome */
@@ -14,9 +15,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-image: url('/images/fondo.jpg');    background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
+  
+    background-image: url('/images/fondo.jpg');    
+    background-size: cover; /* Esto hará que la imagen ocupe toda la pantalla */
     background-position: center; /* Esto centrará la imagen */
+    height: 100%;
+    margin: 0;
+   
     
 }
 h3, h4 {
@@ -118,6 +123,7 @@ justify-content:center;
   
 }
 #Arcane-echoes{
+    margin-top: 1.5vh;
    animation: vanish 1s;
     background-image:url("images/arcane.png");
     background-size: contain;
@@ -181,17 +187,22 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0);
     -1px 1px 0   #e9b0368e, 
     1px 1px 0   #e9b0368e;
 
-   
+    border: 1px solid #ecd8ad2d;
+ 
    
 }
 
 
 .custom-swal{
-    width: 100vh;
-    height:80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+    max-width: 100vw !important; 
+    max-height: 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    
+    width: 100vw !important; 
+    height: 100vh !important;
+  
+ 
     
  font-family:serif;
 
@@ -201,6 +212,11 @@ box-shadow: 2px 2px 4px rgb(0, 0, 0);
     background-image: url(/images/awesome2.png);
 background-size: cover;
 background-position: top;
+background-repeat: no-repeat;
+
+border: none !important;
+box-shadow: none !important;
+
 }
 
 .homeText{
@@ -232,9 +248,13 @@ background-position: top;
     box-shadow: 2px 2px 4px rgb(0, 0, 0);
     background-size: cover;
 background-position: center;    height: 20px;
+border: 1px solid #ecd8ad2d;
  
 }
-
+.swal2-popup {
+    border-radius: 0 !important; /* Elimina los bordes redondeados */
+    box-shadow: none !important; /* Elimina cualquier sombra de caja */
+}
 
 #homeIdiom:active {
     transform: translate3d(0px, 1px, 0);}
