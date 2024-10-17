@@ -183,8 +183,11 @@ Swal.fire({
   
     html:  " <br><br><br><br><br><br><span id='homeSoundOnOff' class='homeText'>Sound Off / On<br></span><button id='homeSound'>🔈</button><br><br><span class='homeText'>English / Español</span><br><button id='homeIdiom'>English</button><br><br><br>",
     confirmButtonText: "Start",
-    backdrop: ` rgba(0, 0, 0, 1)`,
-
+   // Fondo del modal transparente
+    width:"40vh",
+ 
+  imageWidth: 400,
+  imageHeight: 55,
 
     customClass: {
         popup: 'custom-swal',  // Clase personalizada para el modal
@@ -192,15 +195,6 @@ Swal.fire({
     },
     allowOutsideClick: false
 }).then(() => {
-    const docElement = document.documentElement;
-
-    if (docElement.requestFullscreen) {
-      docElement.requestFullscreen();
-    } else if (docElement.webkitRequestFullscreen) {
-      docElement.webkitRequestFullscreen(); // Para Safari y Chrome en iOS
-    } else if (docElement.msRequestFullscreen) {
-      docElement.msRequestFullscreen(); // Para IE/Edge
-    }
     createBoard();
 });
 
@@ -247,9 +241,6 @@ toogle.innerHTML= toogleHome.innerHTML
 
 
 function toogleChange(){
-    match2.currentTime=0;
-    match2.play()
-
   if(toogle.innerHTML=="English" ){
     toogle.innerHTML="Español" 
     frase.innerHTML=frasesEsp[numeroRandom]
